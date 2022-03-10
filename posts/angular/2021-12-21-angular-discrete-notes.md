@@ -6,8 +6,24 @@ toc: true
 notfull: 1
 icon: angular.svg
 keywords: ""
-date: 2022-02-04
+date: 2022-02-16
 ---
+
+## Should "always" use `SimpleChanges`
+
+👇 [Source.](https://dev.to/nickraphael/ngonchanges-best-practice-always-use-simplechanges-always-1feg)
+
+```jsx
+@Input() myFirstInputParameter: string;
+
+ngOnChanges(changes: SimpleChanges) {
+  if (changes.myFirstInputParameter && changes.myFirstInputParameter.currentValue) {
+    this.doSomething(this.myFirstInputParameter)
+  }
+}
+```
+
+Changes get called just because of EACH input.
 
 ## `:host` with `ViewEncapsulation.None`
 

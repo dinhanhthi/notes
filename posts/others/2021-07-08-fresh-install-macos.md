@@ -90,23 +90,9 @@ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
 ```
 
-## **Screen recorder**
+## **Screen recording**
 
-- **My choice**: using [Screenflick](https://www.araelium.com/screenflick-mac-screen-recorder) (paid, 35$).
-  - **Setting to record both system audio and microphone** (Google Meet, for example): Suppose that we allow all Screenflick's requirements for system access. Open Meet, connect external mic > System Settings > Sound > choose the right input and output devices > On Meet, choose and test the right devices > Make a call as usual > Open Screenflick > Tick on Record System Audio (already installed Audio Extension), tick on Record Microphone, choose the right mic (not "BlackHole 2ch"!!) > Record as usual.
-  - ❗ Should test the number of frame rate before recording. I've tried, **20 didn't work**!!!
-
-- Using **QuickTime** / built-in function. Open QuickTime or [[⌘]] + [[⇧]] + [[5]] to open screenshot/recording options. **Weakness**: big size + impossible (or possible??) to record system sounds.
-- Using [OBS](https://obsproject.com/) (Free, suitable for streaming) (for recording app) + [BlackHole](https://github.com/ExistentialAudio/BlackHole) (for bypassing system audio recorder, I chose **2ch** to download).
-  1. Check [this article](https://obsproject.com/forum/resources/os-x-capture-audio-with-ishowu-audio-capture.505/) for setting up with OBS (not that, in this article, they use a different tool than BlackHold)
-  2. Check [this article](https://streamlabs.com/content-hub/post/capturing-desktop-audio-in-streamlabs-obs-for-mac) for using BlackHole to capture system audio on Mac.
-  3. Open **Audio MIDI Setup** > Click on "+" > "Create Multi-Output Device" > Check on (Use side) current using Speaker (ex. External Headphones) + BlackHole 2ch. Check also (Drift Correction) for "External Headphones". Rename to something to remember, e.g. "Screen Recorder". We wanna listen the system audio via 2 output, one is external heaphones, 1 is "virtual" BlackHole (so that it can recorder the sound).
-  4. Open **Sound** setting and choose "Screen Recorder". **Tip**: you should adjust the sound before change to "Screen Recorder" because you will not be able to change sound level in this option.
-  5. In **OBS**, Add screen, add 2 microphones, one for real mic, one for device BlackHole 2ch.
-     1. Open Preferences > Audio: Mic/Aux 1, choose "External microphone", Mic/Aux 2, choose "BlackHole 2ch" > OK.
-  6. Some settings for OBS:
-     1. Turn off preview for screen (for comfortable)
-     2. **Video** > Common FPS Values = 20
+👉 Note: [Screen recording on MacOS](/screen-recording-on-macos/).
 
 ## **Dictionary**
 
@@ -203,10 +189,10 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
   echo $SHELL # should returns /bin/zsh
   # Check zsh version
   zsh --version
-  
+
   # install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  
+
   # install spaceship theme
   git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
   ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
@@ -216,7 +202,7 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
   # Download (then open and install) font Source Code Pro:
   # https://github.com/powerline/fonts/blob/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf
   # Open iTerm2 Preferences > Profile > Text > change font!
-  
+
   # If you wanna see the changes
   source ~/.zshrc
   ```
