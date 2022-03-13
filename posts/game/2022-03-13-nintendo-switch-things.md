@@ -10,27 +10,29 @@ keywords: "gaming relax others switch nintendo mario jbl flip 5 bluetooth speake
 {% assign img-url = '/img/post/gaming/nintendo' %}
 
 ::: warning
-These my personal notes and experiences with Switch. If you find something wrong or there are other things better, [feel free to comment](https://github.com/dinhanhthi/dinhanhthi.com/discussions).
+These are my personal notes and experiences with Switch. If you find something wrong or there are other things that are better, [feel free to comment](https://github.com/dinhanhthi/dinhanhthi.com/discussions).
 :::
 
 ## Good to know
 
-1. You cannot transfer data from one user to another user! However, you can transfer data between consoles, between consoles and server. Other words, the save is sticked to the user.
-2. Should buy games with different accoutns in case you wanna sell them later.
-3. Don't buy a big case (which used for both switch and dock), just buy the case for only the switch (and its small accessories). Whenever you go somewhere, don't bring with you the dock, just the switch with an adapter (which play the same role as the dock).
+1. Buy the physical version if you are a collector / want to sell this game later / want to share it with friends.
+2. Buy the digital version if you aren't good at keeping things / don't want to sell / afraid of damaging the card / too lazy to change the card between games.
+3. You cannot transfer data from one user to another user! However, you can transfer data between consoles, between consoles and server. In other words, the save state is bound to the user.
+4. You should buy games with different accoutns in case you want to sell them later.
+5. Don't buy a big bag (used for both switch and dock), just buy the bag for switch (and its small accessories). When you go somewhere, don't take with you the dock, just the switch with an adapter (which has the same function as the dock).
 
 ## Share your games with friends and share the money
 
-1. Suppose you have account A containing all of your games.
-2. Suppose your friend account is B.
-3. You and your friend should add A on your consoles. **Your friend's console should be the primary console** for A and **yours is the secondary**.
-4. ==You and your friend must play in different accounts==. You play on A and your friend play on B.
+1. Suppose you have an account A that contains all your games.
+2. Suppose your friend has account B.
+3. You and your friend should add A to your consoles. **Your friend's console should be the primary console** for A and **yours is the secondary**.
+4. ==You and your friend need to play in different accounts==. You play on A and your friend plays on B.
 
-What both of you can:
+What you both can do:
 
 1. Play the same game at the same time.
-2. Saved data are sticked to your own accounts (yours is A, your friend's is B).
-3. If both of you subscribe to the nintendo online service, you can play games with each other.
+2. Data is saved opn your own accounts (your account is A, your friend's is B).
+3. If you both subscribe to nintendo online service, you can play together.
 
 ## Games I like
 
@@ -65,44 +67,44 @@ Other games I haven't played much enough to classify:
 
 :::
 
-## Using mouse and keyboard with switch?
+## Use mouse and keyboard with switch?
 
-For playing FPS games, for example. Just using [PXN K5 Pro adapter](https://www.amazon.fr/gp/product/B08P5L24HZ). Note that, the experience of playing game in that way is not so good as imagine. Be careful before you buy this adapter! However, I've tried and it's really work well!
+For example, for playing FPS games. Just use the [PXN K5 Pro adapter](https://www.amazon.fr/gp/product/B08P5L24HZ). But note that, the gaming experience this way is not as good as you imagine. Be careful before you buy this adapter!
 
-**Fact**: I returned the adapter and use a good controller instead (Mine is Xbox controller).
+**Fact**: I returned the adapter and used a good controller instead (mine is an Xbox controller).
 
 ## Using switch without dock?
 
-Just use Buy an adapter (USB-C to HDMI & USB-A & USB-C), I use [Y Team's](https://www.amazon.fr/gp/product/B07DPDMFGH).
+Just buy an adapter (USB-C to HDMI & USB-A & USB-C), I use [Y Team's](https://www.amazon.fr/gp/product/B07DPDMFGH).
 
 **Be careful**: make sure the adapter you buy work with the switch !!!
 
-## Connect Xbox / PS4 / PS5 controller with Switch?
+## Connect Xbox / PS4 / PS5 to connect with Switch?
 
-1. Buy a adapter. I use [MAYFLASH Magic NS Wireless Bluetooth Controller](https://www.amazon.fr/gp/product/B079B5KHWQ).
-2. (Actually, just follow the guide on the adapter)
-3. Plug the adapter to the switch and change to "Switch mode" (red light).
-4. Make sure the light on the adapter is flashing (pairing mode).
-5. Turn the controller on and make it in the pairing mode too.
+1. Buy an adapter. I use [MAYFLASH Magic NS Wireless Bluetooth Controller](https://www.amazon.fr/gp/product/B079B5KHWQ).
+2. (Just follow the instruction on the adapter)
+3. Connect the adapter to the switch and switch to "Switch mode" (red light).
+4. Make sure the light on the adapter is blinking (pairing mode).
+5. Turn on the controller and put it in pairing mode.
 6. Wait.
 7. That's it!
 
-## Should buy a third-party Joy-con?
+## Should you buy a third-party Joy-con?
 
-**DON'T**! Let's buy the Nintendo's ones ==because of the easy in pairing and the battery life!== I know it's expensive but it's worth!
+**DON NOT**! Rather buy Nintendo's ==because they are easy to pair and have a long battery life!== I know they are expensive but they are worth it!
 
-## Connect bluetooth speaker while playing with many bluetooth controllers
+## Pair bluetooth speakers when playing many bluetooth controllers
 
-Normally, switch doesn't allow us to connect it to bluetooth speaker when we are playing with multiple bluetooth controllers. Following below steps:
+Usually, we cannot connect the switch to the bluetooth speaker when playing with multiple bluetooth controllers. Proceed as follows:
 
-1. Buy a Bluetooth Transmitter Receiver (I use [EasyULT](https://www.amazon.fr/gp/product/B08FRHGV5G/)). It has a USB output and a 3.5 input.
-2. Make sure bluetooth speaker is off.
-3. Connect transmitter to the switch dock via USB (or other power source, just to keep it on).
-4. Plug the audio cable to both switch and the transmitter. From now, switch thinks you are using a speaker with the 3.5 jack.
-5. Change the transmitter to **TX mode** ("Transmit mode") so that the audio from switch can transmit to speaker via bluetooth.
-6. Click the main button on the transmitter to turn to the "searching for bluetooth speaker" mode.
-7. Turn the bluetooth speaker on (I use *JBL Flip 5*), put it in the pair mode.
+1. Buy a Bluetooth transceiver (I use [EasyULT](https://www.amazon.fr/gp/product/B08FRHGV5G/)). It has a USB output and a 3.5 input.
+2. Make sure the speaker is turned off.
+3. Connect the transceiver to the switch dock via USB (or another power source, to keep it on).
+4. Connect the audio cable to both the switch and the transceiver. From now on, the switch will assume you are using a speaker with a 3.5 jack.
+5. Switch the transceiver to **TX mode** ("Transmit mode") so that audio can be transmitted from the switch to the speaker.
+6. Click the main button of the transceiver to switch to the "search for bluetooth speaker" mode.
+7. Turn on the bluetooth speaker (I use *JBL Flip 5*), and put it into pairing mode.
 8. Wait.
-9. Make sure the bluetooth speaker is well connected with the transmitter.
+9. Make sure the bluetooth speaker is well connected to the transceiver.
 10. That's it!
-11. If you have done everything but the sound still doesn't appear, try to restart the speaker and reset the pearing mode.
+11. If you have done everything but the sound still doesn't appear, try restarting the speaker and resetting the pairing mode.
