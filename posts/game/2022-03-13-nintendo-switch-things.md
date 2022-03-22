@@ -20,6 +20,13 @@ These are my personal notes and experiences with Switch. If you find something w
 3. You cannot transfer data from one user to another user! However, you can transfer data between consoles, between consoles and server. In other words, the save state is bound to the user.
 4. You should buy games with different accoutns in case you want to sell them later.
 5. Don't buy a big bag (used for both switch and dock), just buy the bag for switch (and its small accessories). When you go somewhere, don't take with you the dock, just the switch with an adapter (which has the same function as the dock).
+6. You credit card / paypal account must have the same country as the country you are using on your nintendo account. In this case, use eShop cards. Buy them on amazon or [eneba](https://www.eneba.com/).
+
+## Useful links
+
+1. [Eneba](https://www.eneba.com/fr/store?page=1&platforms[]=NINTENDO&regions[]=united_states&types[]=giftcard).
+2. [DekuDeals](https://www.dekudeals.com/) (create an account + add alert for the price drop).
+3. [eshops-prices](https://eshop-prices.com/)
 
 ## Share your games with friends and share the money
 
@@ -66,6 +73,16 @@ Other games I haven't played much enough to classify:
 *: for playing with my friends.
 
 :::
+
+## Create a new account?
+
+You create a new Nintendo account and want to use it (as a primary) in your current console.
+
+1. Create a new nintendo account (w.r.t. the country you want).
+2. Setting up the privacy (2 steps verification, for example).
+3. On your console, go to System Settings > User > Add User > Create New User
+4. After creating > choose the option to link this user to the account you have recently created.
+5. That's it!
 
 ## Use mouse and keyboard with switch?
 
