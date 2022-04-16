@@ -5,7 +5,7 @@ tags: [API, JavaScript]
 toc: true
 icon: dialogflow.svg
 keywords: "apis request http apis application programming interface dialogflow google sdk google cloud gcp apis credentials REST postman gapi gsi sign in with google new version service account endpoint location detect intent roles tokens IAM folder organization projects custom roles principals resource manage service usage"
-date: 2022-01-30
+date: 2022-03-23
 ---
 
 {% assign img-url = '/img/post/api' %}
@@ -259,8 +259,6 @@ Sometimes, the location infotmation is mentionned in the REST API but not in the
 
 :::
 
-
-
 ## Location problem
 
 👉 [List of endpoints](https://cloud.google.com/dialogflow/es/docs/reference/rest/v2-overview#rest_endpoints) (containing location inside).
@@ -402,3 +400,86 @@ For example, the returned type for [`getAgent()`](https://cloud.google.com/nodej
 export type Agent = dialogflow.protos.google.cloud.dialogflow.v2.Agent;
 ```
 
+
+
+## Play with Intents, Examples and Entities
+
+🎯 **Aim**: Suppose that we want to create a new entities via API (including the system entities).
+
+- [List all intents from some agent](https://cloud.google.com/dialogflow/es/docs/reference/rest/v2/projects.agent.intents/list): just put in the `parent` something like `projects/<projectId>/agent` and then click **Execute**. Don't forget to choose the `intentView` as `INTENT_VIEW_FULL` (without this one, you cannot see the examples or "trainingPhrases") 👈 Copy and remember the output of type `Intent`.
+- Create a new entities using [this API](https://cloud.google.com/dialogflow/es/docs/reference/rest/v2/projects.agent.intents/create). Again, put in `parent` as `projects/<projectId>/agnet` and then in the **Request body**, paste an object which looks like the output in the previous step (remember to remove "name" sections, this section will be created by DF), then **Execute**.
+
+::: hsbox Example of `Intent`
+
+```json
+{
+  "displayName": "testing system with examples",
+  "priority": 500000,
+  "trainingPhrases": [
+    {
+      "type": "EXAMPLE",
+      "parts": [
+        {
+          "text": "I want to go "
+        },
+        {
+          "text": "there",
+          "entityType": "@sys.color",
+          "alias": "color",
+          "userDefined": true
+        },
+        {
+          "text": " this thursday"
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "parts": [
+        {
+          "text": "toi tên là "
+        },
+        {
+          "text": "đinh anh thi",
+          "entityType": "@thi",
+          "alias": "thi",
+          "userDefined": true
+        }
+      ]
+    },
+    {
+      "type": "EXAMPLE",
+      "parts": [
+        {
+          "text": "anh "
+        },
+        {
+          "text": "thi dinh",
+          "entityType": "@thi",
+          "alias": "thi",
+          "userDefined": true
+        },
+        {
+          "text": ", it's me"
+        }
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "name": "aa07d940-bcc7-464d-af4d-d38120737b9c",
+      "displayName": "thi",
+      "value": "$thi",
+      "entityTypeDisplayName": "@thi"
+    },
+    {
+      "name": "bde49cda-37d8-43c3-9461-83c2fbc90996",
+      "displayName": "color",
+      "value": "$color",
+      "entityTypeDisplayName": "@sys.color"
+    }
+  ]
+}
+```
+
+:::

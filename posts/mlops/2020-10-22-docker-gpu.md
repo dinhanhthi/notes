@@ -31,15 +31,23 @@ date: 2021-06-01
 You have to install (successfully) GPU driver on your (linux) machine before continuing the steps in this note. Go to "[Check info](#check-info)" section to check the availability of your drivers.
 :::
 
-It works perfectly on Pop!_OS 20.04,
+::: info
+(Maybe **for me only**) It works perfectly on **Pop!_OS 20.04**, I've tried and we have many problems with **Pop!_OS 21.10**. There fore ==stick to 20.04==!!!!``
+:::
 
 ``` bash
 sudo apt update
+
 sudo apt install -y nvidia-container-runtime
-sudo apt install -y nvidia-container-toolkit
+# You may need to replace above line with
+sudo apt install nvidia-docker2
+sudo apt install nvidia-container-toolkit
+
 sudo apt install -y nvidia-cuda-toolkit
 # restard required
 ```
+
+If you have problems when installing `nvidia-docker2`, read [this section](/docker-gpu/#install-nvidia-docker2)!
 
 ## Check info
 
@@ -82,24 +90,57 @@ docker run --help | grep -i gpus
 # output: --gpus gpu-request GPU devices to add to the container ('all' to pass all GPUs)
 ```
 
+### Check docker work with gpu?
+
 ``` bash
 # Listing out GPU devices
 docker run -it --rm --gpus all ubuntu nvidia-smi -L
 # output: GPU 0: GeForce GTX 1650 (...)
 ```
 
-``` bash
-# Verifying again with nvidia-smi
-docker run -it --rm --gpus all ubuntu nvidia-smi
+```bash
+# ERROR ?
+# docker: Error response from daemon: failed to create shim: OCI runtime create failed: container_linux.go:380: starting container process caused: process_linux.go:545: container init caused: Running hook #0:: error running hook: exit status 1, stdout: , stderr: nvidia-container-cli: initialization error: load library failed: libnvidia-ml.so.1: cannot open shared object file: no such file or directory: unknown.
+```
+
+```bash
+# ERROR ?
+# Error response from daemon: could not select device driver "" with capabilities: [[gpu]]
+
+# Solution: install nvidia-docker2
 ```
 
 ``` bash
-# test a working setup container-toolkit
+# Verifying again with nvidia-smi
+docker run -it --rm --gpus all ubuntu nvidia-smi
+
+# Return something like
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 510.54       Driver Version: 510.54       CUDA Version: 11.6     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  Off  | 00000000:01:00.0 Off |                  N/A |
+| N/A   55C    P0    11W /  N/A |    369MiB /  4096MiB |      5%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+# and another box like this
+```
+
+``` bash
+# Test a working setup container-toolkit
+# Update 14/04/2022: the tag "latest" has deprecated => check your system versions and use
+# the corresponding tag
+# So, the below code is only for reference, it's not working anymore
 docker run --rm --gpus all nvidia/cuda nvidia-smi
 ```
 
 ``` bash
-# test a working setup container-runtime
+# Test a working setup container-runtime
+# Update 14/04/2022: below code isn't working anymore because nvidia/cuda doesn't have
+# the "latest" tag!
 docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 
 # Error response from daemon: Unknown runtime specified nvidia.
@@ -115,22 +156,54 @@ docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 
 {% endhsbox %}
 
-
 👉 (Should follow this for the up-to-date) [Officicial guide to install](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker).
+
+**Note**: (For me only) use below codes.
 
 {% hsbox "Command lines (for quickly preview)" %}
 
 ``` bash
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+
+# NOTE FOR POPOS 20.04
+# replace above line with
+distribution=ubuntu20.04
+
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 
 sudo apt-get update
 sudo apt-get install -y nvidia-docker2
+```
 
+👇 Read more about [below error](https://gist.github.com/kuang-da/2796a792ced96deaf466fdfb7651aa2e#install-nvidia-docker2).
+
+```bash
+# Error?
+# Read more: 
+# Depends: nvidia-container-toolkit (>= 1.9.0-1) but 1.5.1-1pop1~1627998766~20.04~9847cf2 is to be installed
+
+# create a new file
+sudo nano /etc/apt/preferences.d/nvidia-docker-pin-1002
+# with below content
+Package: *
+Pin: origin nvidia.github.io
+Pin-Priority: 1002
+# then save
+
+# try again
+sudo apt-get install -y nvidia-docker2
+```
+
+```bash
 # restart docker
 sudo systemctl restart docker
+
+# wanna check?
+sudo docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 ```
+
+
 
 {% endhsbox %}
 
@@ -349,7 +422,7 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 	``` bash
 	# list all gpus
 	lspci -nn | grep '\[03'
-
+	
 	# check nvidia & cuda versions
 	nvidia-smi
 	```
@@ -358,11 +431,11 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 	``` bash
 	curl -s -L https://nvidia.github.io/nvidia-container-runtime/gpgkey | sudo apt-key add -
 	distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-
+	
 	curl -s -L https://nvidia.github.io/nvidia-container-runtime/$distribution/nvidia-container-runtime.list | sudo tee /etc/apt/sources.list.d/nvidia-container-runtime.list
-
+	
 	sudo apt-get update
-
+	
 	sudo apt-get install nvidia-container-runtime
 	```
 3. Note that, <mark markdown='span'>we cannot use `docker-compose.yml` in this case!!!</mark>
@@ -370,17 +443,17 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 
 	``` docker
 	FROM nvidia/cuda:10.2-base
-
+	
 	RUN apt-get update && \
 		apt-get -y upgrade && \
 		apt-get install -y python3-pip python3-dev locales git
-
+	
 	# install dependencies
 	COPY requirements.txt requirements.txt
 	RUN python3 -m pip install --upgrade pip && \
 		python3 -m pip install -r requirements.txt
 	COPY . .
-
+	
 	# default command
 	CMD [ "jupyter", "lab", "--no-browser", "--allow-root", "--ip=0.0.0.0"  ]
 	```
@@ -388,7 +461,7 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 
 	``` bash
 	docker run --name docker_thi --gpus all -v /home/thi/folder_1/:/srv/folder_1/ -v /home/thi/folder_1/git/:/srv/folder_2 -dp 8888:8888 -w="/srv" -it img_datas
-
+	
 	# -v: volumes
 	# -w: working dir
 	# --gpus all: using all gpus on base machine
