@@ -1,5 +1,12 @@
 [
   {
+    "title": "dinhanhthi.com-v4 in gatsby",
+    "description": "An implementation of my personal website (v4) using GatsbyJS and TailwindCSS. It's not complete (and I've discontinued) but it's well written.",
+    "source": "https://github.com/dinhanhthi/dinhanhthi.com-v4-gatsby",
+    "icon": "🥕",
+    "tech": ["gatsby", "js", "react", "tailwindcss", "graphql"]
+  },
+  {
     "title": "Google APIs Playground",
     "icon": "🏖",
     "description": "A playground for Google APIs",
@@ -13,14 +20,7 @@
     "description": "New version of TEXmath. A website about LaTeX and Tech Tutorials. This site is a part of our main project - Math2IT.",
     "source": "https://github.com/math2it/texmath-gas",
     "url": "http://texmath.com",
-    "tech": [
-      "gatsby",
-      "js",
-      "react",
-      "tailwindcss",
-      "graphql",
-      "wordpress"
-    ]
+    "tech": ["gatsby", "js", "react", "tailwindcss", "graphql", "wordpress"]
   },
   {
     "title": "dinhanhthi.com",
@@ -28,15 +28,7 @@
     "description": "11ty theme. Current version of my personal website.",
     "source": "https://github.com/dinhanhthi/dinhanhthi.com",
     "url": "http://dinhanhthi.com",
-    "tech": [
-      "eleventy",
-      "html5",
-      "js",
-      "liquid",
-      "nodejs",
-      "nunjucks",
-      "scss"
-    ]
+    "tech": ["eleventy", "html5", "js", "liquid", "nodejs", "nunjucks", "scss"]
   },
   {
     "title": "Data Science Learning",

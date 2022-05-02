@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Connet between 2 computers locally"
+title: "Connect between 2 computers locally"
 tags: [Skills, Linux, Shell]
 toc: false
 icon: lan.svg
 keywords: "ssh connection 2 computer local LAN open server terminal"
+date: 2022-04-20
 ---
 
 
@@ -17,6 +18,12 @@ keywords: "ssh connection 2 computer local LAN open server terminal"
 Two computers must be connected to the same network!
 
 :::
+
+
+
+👉 Note: [SSH](/ssh/).
+👉 Note: [ Docker  + GPUs](/docker-gpu/)
+👉 Note: [Docker 101](/docker/)
 
 
 
@@ -61,7 +68,7 @@ ifconfig | grep "192.168"
 # mine: 192.168.1.115
 ```
 
-**Test**: connect from **comp1 to comp1** itself!
+**Test**: connect from **comp1** to **comp1** itself!
 
 ```bash
 ssh 127.0.0.1
@@ -155,19 +162,27 @@ PermitRootLogin yes
 /etc/init.d/ssh start
 ```
 
+In the `docker-compose.yml`
+
+```yaml
+# expose the ports
+ports:
+	- "6789:2222"
+```
+
 ```bash
 # Test on comp1
-ssh -p 52222 root@localhost
+ssh -p 6789 root@localhost
 # enter "qwerty" password for "root"
 
 # Connect from comp2
-ssh -p 52222 root@pop-os.local
+ssh -p 6789 root@pop-os.local
 # enter "qwerty" password for "root"
 ```
 
 ❇️  In case your image ==has already installed `openssh-server` but forgot to run it by default==. We will run the ssh server on port `22` for the running container.
 
-::: hsbox The codes in `Dockerfile` which are used to install and set up openssh-server
+::: hsbox The codes in `Dockerfile` which are used to install and set up `openssh-server`
 
 ```bash
 RUN apt-get install -y openssh-server
@@ -185,7 +200,43 @@ EXPOSE 22
 
 :::
 
-Don't forget to forward the port `22` (in container) to `9876` in **comp1** via `docker-compose.yml`.
+Add below line to `Dockerfile` if you wanna run the openssh-server by default
+
+```bash
+CMD $(which sshd) -Ddp 22
+```
+
+::: warning
+
+We shouldn't (cannot??) run 2 servers in parallel in the docker image (for example, one for jupyter notebook on port `8888` and one for `openssh-server` on port `22`).
+
+💡 In this case, you should keep the jupyter notebook running. Each time you wanna run the `openssh-server`, you can run
+
+```bash
+docker exec docker_ai $(which sshd) -Ddp 22 # and keep this tab open
+# or
+docker exec -d .... # detach mode
+```
+
+You can also do this ==completely from **comp2**==,
+
+```bash
+ssh thi@pop-os.local
+# Then you are in comp1's terminal
+docker exec ....
+```
+
+**Important remark**: If you enter the container's shell and then you wanna exit with `exit` or `logout` command. It also terminates the server and you have to run the server again!
+
+:::
+
+
+
+::: info
+
+Don't forget to forward the port `22` (in container) to `6789` in **comp1** via `docker-compose.yml`.
+
+:::
 
 ```bash
 # On comp1
@@ -195,7 +246,7 @@ docker exec <container_name> $(which sshd) -Ddp 22
 
 ```bash
 # On comp2
-ssh -p 9876 root@pop-os.local
+ssh -p 6789 root@pop-os.local
 # enter pwd: "qwerty" as in the Dockerfile
 ```
 

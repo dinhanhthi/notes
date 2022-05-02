@@ -4,7 +4,8 @@ title: "Google Colab"
 tags: [Skills]
 toc: true
 icon: colab.png
-keywords: "github notebook google drive hotkey TensorFlow pytorch gpu import library git with colab upload a file to colab 7zip zip graphviz pydot cartopy save as html keep google colab open awake prevent from disconnect"
+keywords: "github notebook google drive hotkey TensorFlow pytorch gpu import library git with colab upload a file to colab 7zip zip graphviz pydot cartopy save as html keep google colab open awake prevent from disconnect re-install install packages"
+date: 2022-04-21
 ---
 
 {% assign img-url = '/img/post/skills' %}
@@ -53,7 +54,9 @@ read_file = csv.reader(opened_file.splitlines())
 
 ## Hotkeys / Shortcuts
 
-Check the command shortcuts in **Tools** > **Keyboard shortcuts** (<kbd>Ctrl</kbd> + <kbd>M</kbd> <kbd>H</kbd>), below are the most popular ones:
+Check the command shortcuts in **Tools** > **Keyboard shortcuts** (<kbd>Ctrl</kbd> + <kbd>M</kbd> <kbd>H</kbd>), below are the most popular ones (If you use MacOS, replace [[Ctrl]] with [[cmd]]):
+
+::: hsbox Show the list
 
 - <kbd>Ctrl</kbd> + <kbd>S</kbd>: **save** the notebook.
 - <kbd>Ctrl</kbd> + <kbd>Enter</kbd>: **run** a cell in place.
@@ -69,8 +72,12 @@ Check the command shortcuts in **Tools** > **Keyboard shortcuts** (<kbd>Ctrl</kb
 - <kbd>Ctrl</kbd> + <kbd>H</kbd>: global **find/replace**.
 - <kbd>Ctrl</kbd> + <kbd>G</kbd>: global **find next**.
 
-{:alert.alert-success}
+:::
+
+::: success
 We can use system commands in Colab with `!<command>`. For example, `!git clone ...`.
+
+:::
 
 ## Import libraries
 
@@ -79,6 +86,68 @@ We can use system commands in Colab with `!<command>`. For example, `!git clone 
 # or
 !apt-get -qq install -y libfluidsynth1
 ~~~
+
+### Install permanently
+
+👇 [Source](https://stackoverflow.com/a/57708521/1323473) (There are a little bit changes).
+
+Install `gcsfuse`,
+
+```bash
+!echo "deb http://packages.cloud.google.com/apt gcsfuse-bionic main" > /etc/apt/sources.list.d/gcsfuse.list
+!curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+!apt -qq update
+!apt -qq install gcsfuse
+```
+
+```bash
+!mkdir googleBucketFolder
+!gcsfuse --implicit-dirs colab-connect-bucket googleBucketFolder
+```
+
+::: hsbox Do these before continuing
+
+- Create a new GCP project.
+- Create a [service accout](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) and download a json file.
+- Create a new [Google Storage Bucket](https://console.cloud.google.com/storage/browser) (you may be charged).
+
+:::
+
+
+
+```bash
+%%writefile /key.json
+{
+  "type": "service_account",
+  "project_id": "kora-id",
+  "private_key_id": "xxxxxxx",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nxxxxxxx==\n-----END PRIVATE KEY-----\n",
+  "client_email": "colab-7@kora-id.iam.gserviceaccount.com",
+  "client_id": "100380920993833371482",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "...."
+}
+```
+
+```bash
+%env GOOGLE_APPLICATION_CREDENTIALS=/key.json
+```
+
+```bash
+import sys
+nb_path = 'googleBucketFolder'
+sys.path.insert(0, nb_path)
+```
+
+Whenever you want to install a package,
+
+```bash
+!pip install --target=$nb_path transformers
+```
+
+
 
 ## Upgrade/Switch TensorFlow versions
 

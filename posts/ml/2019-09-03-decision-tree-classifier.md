@@ -379,8 +379,6 @@ array([[0., 1.]])
 
 Plot the tree (You may need to install [Graphviz](https://www.graphviz.org/) first. Don't forget to add its installed folder to `$path`),
 
-<div class="columns-2">
-
 ~~~ python
 from IPython.display import Image
 import pydotplus
@@ -391,8 +389,9 @@ graph = pydotplus.graph_from_dot_data(dot_data)
 Image(graph.create_png())
 ~~~
 
+::: hsbox Show figure
 ![Iris tree.]({{img-url}}/iris-tree.png){:.img-100 .pop}
-</div>
+:::
 
 Save the tree (follows the codes in "plot the tree")
 

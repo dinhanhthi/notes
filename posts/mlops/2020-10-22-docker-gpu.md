@@ -5,7 +5,7 @@ tags: [MLOps, Docker, Backend]
 toc: true
 icon: docker.svg
 keywords: "pybash tania rascia CI CD continuous integration deployment pipeline docker idea how to use airflow kubernetes k8s k apache container images dangling images vscode vsc visual studio code ssh container env environnement file variable nvidia docker runtime gpus tensorflow torch"
-date: 2021-06-01
+date: 2022-04-21
 ---
 
 {% assign img-url = '/img/post/deploy/docker' %}
@@ -32,7 +32,7 @@ You have to install (successfully) GPU driver on your (linux) machine before con
 :::
 
 ::: info
-(Maybe **for me only**) It works perfectly on **Pop!_OS 20.04**, I've tried and we have many problems with **Pop!_OS 21.10**. There fore ==stick to 20.04==!!!!``
+(Maybe **for me only**) It works perfectly on **Pop!_OS 20.04**, I've tried and we have many problems with **Pop!_OS 21.10**. Therefore ==stick to 20.04==!!!!
 :::
 
 ``` bash
@@ -129,6 +129,8 @@ docker run -it --rm --gpus all ubuntu nvidia-smi
 # and another box like this
 ```
 
+::: hsbox Archived but still useful
+
 ``` bash
 # Test a working setup container-toolkit
 # Update 14/04/2022: the tag "latest" has deprecated => check your system versions and use
@@ -147,6 +149,10 @@ docker run --runtime=nvidia --rm nvidia/cuda nvidia-smi
 # Search below for "/etc/docker/daemon.json"
 # Maybe it helps.
 ```
+
+:::
+
+
 
 ## Install `nvidia-docker2`
 

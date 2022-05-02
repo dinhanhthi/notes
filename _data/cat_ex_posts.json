@@ -13,7 +13,7 @@
   },
   {
     "title": "DL 4 - CNN",
-    "url": "https://dinhanhthi.notion.site/CNN-by-deeplearning-ai-a081d253fc2c4c0b99edd2757c759b9e",
+    "url": "https://thi-ds.notion.site/CNN-by-deeplearning-ai-888f4235aac54dd1ac4f4d34af126e04",
     "notfull": false,
     "hide": false,
     "tags": ["MOOC", "CNN", "Deep Learning", "deeplearning.ai"],
@@ -21,13 +21,13 @@
   },
   {
     "title": "DL 5 - Sequence models",
-    "url": "https://dinhanhthi.notion.site/Sequence-models-by-deeplearning-ai-427774f7b31846fdb17ac09cd2353fbe",
+    "url": "https://thi-ds.notion.site/Sequence-models-by-deeplearning-ai-2336322777b54bb6bd4528b99202ad79",
     "tags": ["MOOC", "Deep Learning", "deeplearning.ai", "RNN", "NLP"],
     "keywords": "natural language processing coursera"
   },
   {
     "title": "NLP by HSE University",
-    "url": "https://dinhanhthi.notion.site/NLP-by-HSE-20cec3e92201475eb4d48787954f3aa4",
+    "url": "https://thi-ds.notion.site/NLP-by-HSE-9e83f31c193347cb8ac450994a8d3c4e",
     "tags": ["MOOC", "NLP", "Deep Learning"],
     "notfull": true,
     "private": true,
@@ -49,15 +49,15 @@
   },
   {
     "title": "Angular 101",
-    "url": "https://dinhanhthi.notion.site/Angular-101-fcbd5683f8e941f89c709595792b62d2",
+    "url": "https://thi-web-dev.notion.site/Angular-101-ec0468f04c674f8b8665353b468e555e",
     "tags": ["Angular"],
     "notfull": true,
     "keywords": "angular ng ngx node js 101 directives modules components view theme frameworks frontend front front end 101 fundamental",
     "private": true
   },
   {
-    "title": "JS 101 (Notion)",
-    "url": "https://dinhanhthi.notion.site/JS-101-986f4079607641d49ca8e149a1d29cec",
+    "title": "JS discrete notes (Notion)",
+    "url": "https://thi-web-dev.notion.site/JS-101-e8d0d99495424c2384c769e48fb0745e",
     "tags": ["JavaScript"],
     "notfull": true,
     "keywords": "callback javascript js 101 basic fundamental angular sync async 101 fundamental",
@@ -65,7 +65,7 @@
   },
   {
     "title": "RxJS 101",
-    "url": "https://dinhanhthi.notion.site/RxJS-b4bc7e2d1f7d49b79d4cb701785e355f",
+    "url": "https://www.notion.so/thi-web-dev/RxJS-ad50fc71015f4b04af9a33dcc9cb19ec",
     "tags": ["JavaScript"],
     "notfull": true,
     "keywords": "rxjs Reactive Extensions for JavaScript async observable stream 101 fundamental",
@@ -73,70 +73,27 @@
   },
   {
     "title": "TypeScript 101",
-    "url": "https://dinhanhthi.notion.site/TypeScript-101-0de2463def0948bb9dc7485d81b6082c",
+    "url": "https://www.notion.so/thi-web-dev/TypeScript-101-4c398f25eee94baba017ade8b28648dc",
     "tags": ["JavaScript"],
     "notfull": true,
     "keywords": "angular typescript ts javascript type superset microsoft 101 fundamental",
     "private": true
   },
   {
-    "title": "Reading - Hands-On ML with Scikit-learn, Keras & TF",
-    "url": "https://dinhanhthi.notion.site/Reading-Hands-On-ML-with-Scikit-learn-Keras-TensorFlow-d6992a026bed4423adae2d1c9ae2733b",
-    "notfull": true,
-    "hide": false,
-    "private": true,
-    "read": true,
-    "tags": ["Machine Learning", "TensorFlow", "Reading"],
-    "keywords": "ML fundamental reading book scikit-learn keras tensorflow"
-  },
-  {
-    "title": "Reading - DL with Python",
-    "url": "https://dinhanhthi.notion.site/Deep-Learning-with-Python-bd9efddc516344f0b5acdaf25c131fd9",
-    "notfull": true,
-    "hide": false,
-    "private": true,
-    "tags": ["Deep Learning", "Reading"],
-    "keywords": "deep learning python book reading"
-  },
-  {
-    "title": "Firebase (with Angular)",
-    "url": "https://dinhanhthi.notion.site/Firebase-with-Angular-f83a913079ee4a9bae45d9c8b4e51f4a",
-    "notfull": true,
-    "private": true,
-    "tags": ["Angular", "Database"],
-    "keywords": "firebase CRUD request angular javascript ovservable"
-  },
-  {
     "title": "Angular Unit Tests",
-    "url": "https://dinhanhthi.notion.site/Angular-Unit-Testing-0c91cc6c21174ccd920780ba260a063e",
+    "url": "https://thi-web-dev.notion.site/Angular-Unit-Testing-4665ec0d7aec40eb9ea3710296eb1693",
     "notfull": true,
     "private": false,
     "tags": ["Angular", "Unit Test"],
     "keywords": "angular unit test angularjs angular 2 testing"
   },
   {
-    "title": "Angular good to read",
-    "url": "https://dinhanhthi.notion.site/Angular-Good-to-read-295b74252daf484a8728c2e3518447d3",
-    "notfull": true,
-    "private": true,
-    "tags": ["Angular"],
-    "keywords": "angular references docs documentation articles blogs tips tuts tricks"
-  },
-  {
-    "title": "Angular good practices",
-    "url": "https://dinhanhthi.notion.site/Angular-good-practices-4eb691d547094cb5a78cc172e71c1c94",
-    "notfull": true,
-    "private": true,
-    "tags": ["Angular"],
-    "keywords": "tricks best practices good practices behavior techniques cheat cheatsheet"
-  },
-  {
-    "title": "Unit Testing with JestJS",
-    "url": "https://dinhanhthi.notion.site/Unit-Testing-with-Jest-bf57b6c0b9a441b5a5d597105fdc547d",
+    "title": "Angular discrete note",
+    "url": "https://thi-web-dev.notion.site/Angular-discrete-notes-379bd896d0434775afdc936401bc9e99",
     "notfull": true,
     "private": false,
-    "tags": ["JavaScript", "Angular", "Unit Test"],
-    "keywords": "unit testing frontend backend angular js javascript mock stub spy spies"
+    "tags": ["Angular"],
+    "keywords": "angular discrete notes tips 101 combineLatest rxjs OnPush change detection SimpleChanges ViewEncapsulation host css classes"
   },
   {
     "title": "PvZ Battle For Neighborville",
