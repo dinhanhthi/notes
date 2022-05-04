@@ -24,6 +24,12 @@
     "url": "https://getbootstrap.com/"
   },
   {
+    "id": "dialogflow",
+    "name": "Dialogflow",
+    "icon": "dialogflow.svg",
+    "url": "https://cloud.google.com/dialogflow"
+  },
+  {
     "id": "docker",
     "name": "Docker",
     "icon": "docker.svg",
@@ -70,6 +76,12 @@
     "name": "GitKraken",
     "icon": "gitkraken.svg",
     "url": "https://www.gitkraken.com/"
+  },
+  {
+    "id": "gcp",
+    "name": "GCP",
+    "icon": "gcp.svg",
+    "url": "https://cloud.google.com/"
   },
   {
     "id": "google-nodejs-api",
@@ -262,6 +274,12 @@
     "name": "Tailwind",
     "icon": "tailwindcss.svg",
     "url": "https://tailwindcss.com/"
+  },
+  {
+    "id": "vertex-ai",
+    "name": "Vertex AI",
+    "icon": "vertex.png",
+    "url": "https://cloud.google.com/vertex-ai"
   },
   {
     "id": "vscode",

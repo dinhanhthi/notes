@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google Colab"
-tags: [Skills]
+tags: [API & Services, Google]
 toc: true
 icon: colab.png
 keywords: "github notebook google drive hotkey TensorFlow pytorch gpu import library git with colab upload a file to colab 7zip zip graphviz pydot cartopy save as html keep google colab open awake prevent from disconnect re-install install packages"

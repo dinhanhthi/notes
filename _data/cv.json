@@ -15,7 +15,9 @@
         ],
         "tech": [
           "angular",
+          "dialogflow",
           "firebase",
+          "gcp",
           "git",
           "gitkraken",
           "google-nodejs-api",
@@ -31,7 +33,8 @@
           "rxjs",
           "scikit-learn",
           "tensorflow",
-          "ts"
+          "ts",
+          "vertex-ai"
         ]
       },
       {

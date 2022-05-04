@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google APIs"
-tags: [API, JavaScript]
+tags: [API & Services, JavaScript, Google]
 toc: true
 icon: dialogflow.svg
 keywords: "apis request http apis application programming interface dialogflow google sdk google cloud gcp apis credentials REST postman gapi gsi sign in with google new version service account endpoint location detect intent roles tokens IAM folder organization projects custom roles principals resource manage service usage"

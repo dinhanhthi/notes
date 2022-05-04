@@ -12,7 +12,7 @@
     "description": "A playground for Google APIs",
     "source": "https://github.com/dinhanhthi/google-api-playground",
     "url": "https://dinhanhthi.com/google-dialogflow-api/",
-    "tech": ["js", "google-nodejs-api"]
+    "tech": ["dialogflow", "js", "google-nodejs-api"]
   },
   {
     "title": "TEXmath Rebuild",

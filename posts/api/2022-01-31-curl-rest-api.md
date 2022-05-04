@@ -1,36 +1,39 @@
 ---
 layout: post
 title: "REST API with cURL"
-tags: [API, Shell]
+tags: [API & Services, Shell]
 icon: curl.svg
 iconWhite: true
 notfull: 1
 keywords: "rest api curl http request put set get post patch"
-date: 2022-02-01
+date: 2022-05-02
 ---
 
 - [Official doc](https://curl.se/).
-- In **[Postman](https://www.postman.com/)**, we can click on "Code snippet" icon (on the right side) to show the curl command (and other commands too). 
+- In **[Postman](https://www.postman.com/)**, we can click on "Code snippet" icon (on the right side) to show the curl command (and other commands too).
 
-General:
+## General
+
+Note that, `-X = --request`.
 
 ```bash
-# -X = --request
 curl -X [method] [options] [URL]
 ```
 
-Some examples:
+## Some examples
+
+### GET
 
 ```bash
-# GET
 curl -X GET 'http://abc:3000/xyz/enpoint?paramOne=1&paramTwo=2' \
 	--header 'clientEmail: abc@xyz.com' \
 	--header 'privateKey: LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2Z0lCQU'
 	}'
 ```
 
+### POST
+
 ```bash
-# POST
 curl -X POST 'http://abc:3000/xyz/enpoint?paramOne=1&paramTwo=2' \
 	--header 'clientEmail: abc@xyz.com' \
 	--header 'privateKey: LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2Z0lCQU' \
@@ -41,20 +44,24 @@ curl -X POST 'http://abc:3000/xyz/enpoint?paramOne=1&paramTwo=2' \
 			"keyTwo": 2
 		}
 	}'
-	
-# or
+```
+
+or,
+
+```bash
 curl -X POST -H "Content-Type: application/json" \
     -d '{"name": "linuxize", "email": "linuxize@example.com"}' \
     https://example/contact
 ```
 
+### With a form
+
 ```jsx
-// Form
 <form method="POST" enctype='multipart/form-data' action="upload.cgi">
   <input type=file name=upload>
   <input type=submit name=press value="OK">
 </form>
-    
+
 <!-- POST with file upload
 -F = --form
 -->

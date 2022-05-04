@@ -6,7 +6,7 @@ toc: true
 icon: "customize.svg"
 math: true
 keywords: "me for me only customize admin panel edition customize edit this site box font blocks for me only dinhanhthi dinh anh thi custom size emoji"
-noOudated: true
+noOutdated: true
 ---
 
 This post is for me only. It contains shortcodes to create this website.
@@ -36,7 +36,8 @@ private: true # (if the post comes from external source) a private link
 read: true # reading post type
 math: true # using math equations in note?
 good: true # (on hold) the note is good written
-noOudated: true # this kind of post doesn't have "outdated" warning box
+noOutdated: true # this kind of post doesn't have "outdated" warning box
+customJS: ["toggle-notes.js"] # for custom js files which are stored in _includes/scripts/
 ```
 
 ## Other components

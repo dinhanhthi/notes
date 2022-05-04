@@ -42,7 +42,7 @@
     ]
   },
   {
-    "name": "Tools",
-    "list": ["bash", "git", "gitkraken", "latex", "linux", "postman", "sphinx", "vscode"]
+    "name": "Tools & Services",
+    "list": ["bash", "dialogflow", "gcp", "git", "gitkraken", "latex", "linux", "postman", "sphinx", "vertex-ai", "vscode"]
   }
 ]
