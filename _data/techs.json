@@ -9,13 +9,13 @@
     "id": "angular",
     "name": "Angular",
     "icon": "angular.svg",
-    "url": "https://angular.io/"
+    "url": "/tags/angular/"
   },
   {
     "id": "bash",
     "name": "GNU Bash",
     "icon": "bash_.svg",
-    "url": "https://www.gnu.org/software/bash/"
+    "url": "/tags/shell/"
   },
   {
     "id": "bootstrap",
@@ -27,19 +27,19 @@
     "id": "dialogflow",
     "name": "Dialogflow",
     "icon": "dialogflow.svg",
-    "url": "https://cloud.google.com/dialogflow"
+    "url": "/google-dialogflow-api/"
   },
   {
     "id": "docker",
     "name": "Docker",
     "icon": "docker.svg",
-    "url": "https://www.docker.com/"
+    "url": "/tags/docker/"
   },
   {
     "id": "eleventy",
     "name": "Eleventy",
     "icon": "11ty.svg",
-    "url": "https://www.11ty.dev/"
+    "url": "/11ty-nunjucks/"
   },
   {
     "id": "firebase",
@@ -63,31 +63,31 @@
     "id": "gatsby",
     "name": "GatsbyJS",
     "icon": "gatsby.svg",
-    "url": "https://www.gatsbyjs.com/"
+    "url": "/tags/gatsbyjs/"
   },
   {
     "id": "git",
     "name": "Git",
     "icon": "git.svg",
-    "url": "https://git-scm.com/"
+    "url": "/git/"
   },
   {
     "id": "gitkraken",
     "name": "GitKraken",
     "icon": "gitkraken.svg",
-    "url": "https://www.gitkraken.com/"
+    "url": "/gitkraken/"
   },
   {
     "id": "gcp",
     "name": "GCP",
     "icon": "gcp.svg",
-    "url": "https://cloud.google.com/"
+    "url": "/tags/google/"
   },
   {
     "id": "google-nodejs-api",
     "name": "NodeJS API",
     "icon": "google-nodejs-api.svg",
-    "url": "https://github.com/googleapis/google-api-nodejs-client"
+    "url": "/google-dialogflow-api/"
   },
   {
     "id": "graphql",
@@ -117,7 +117,7 @@
     "id": "jekyll",
     "name": "Jekyll",
     "icon": "jekyll.svg",
-    "url": "https://jekyllrb.com/"
+    "url": "/jekyll-tips/"
   },
   {
     "id": "jestjs",
@@ -129,13 +129,13 @@
     "id": "js",
     "name": "JavaScript",
     "icon": "js.svg",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    "url": "/tags/javascript/"
   },
   {
     "id": "jupyter",
     "name": "Jupyter",
     "icon": "jupyter.svg",
-    "url": "https://jupyter.org/"
+    "url": "/jupyter-notebook/"
   },
   {
     "id": "latex",
@@ -147,13 +147,13 @@
     "id": "linux",
     "name": "Linux",
     "icon": "linux_.svg",
-    "url": "https://www.linux.org/"
+    "url": "/tags/linux/"
   },
   {
     "id": "liquid",
     "name": "Liquid",
     "icon": "liquid.svg",
-    "url": "https://shopify.github.io/liquid/"
+    "url": "/jekyll-tips/"
   },
   {
     "id": "matlab",
@@ -183,13 +183,13 @@
     "id": "nodejs",
     "name": "NodeJS",
     "icon": "node.svg",
-    "url": "https://nodejs.org/"
+    "url": "/nodejs-npm/"
   },
   {
     "id": "nunjucks",
     "name": "Nunjucks",
     "icon": "nunjucks.svg",
-    "url": "https://mozilla.github.io/nunjucks/"
+    "url": "/11ty-nunjucks/"
   },
   {
     "id": "php",
@@ -207,13 +207,13 @@
     "id": "python",
     "name": "Python",
     "icon": "python.svg",
-    "url": "https://www.python.org/"
+    "url": "/tags/python/"
   },
   {
     "id": "pytorch",
     "name": "PyTorch",
     "icon": "pytorch.svg",
-    "url": "https://pytorch.org/"
+    "url": "/pytorch/"
   },
   {
     "id": "r-lang",
@@ -249,19 +249,19 @@
     "id": "scss",
     "name": "SCSS",
     "icon": "sass.svg",
-    "url": "https://sass-lang.com/"
+    "url": "/css-tips/"
   },
   {
     "id": "sphinx",
     "name": "Sphinx Doc",
     "icon": "sphinx.svg",
-    "url": "https://www.sphinx-doc.org/"
+    "url": "/sphinx-restructuredtext/"
   },
   {
     "id": "tensorflow",
     "name": "TensorFlow",
     "icon": "tf.svg",
-    "url": "https://www.tensorflow.org/"
+    "url": "/tags/tensorflow/"
   },
   {
     "id": "ts",
@@ -279,18 +279,18 @@
     "id": "vertex-ai",
     "name": "Vertex AI",
     "icon": "vertex.png",
-    "url": "https://cloud.google.com/vertex-ai"
+    "url": "/google-vertex-ai/"
   },
   {
     "id": "vscode",
     "name": "VS Code",
     "icon": "vscode.svg",
-    "url": "https://code.visualstudio.com/"
+    "url": "/visual-studio-code/"
   },
   {
     "id": "wordpress",
     "name": "Wordpress",
     "icon": "wordpress.svg",
-    "url": "https://wordpress.org/"
+    "url": "/tags/wordpress/"
   }
 ]
