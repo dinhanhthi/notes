@@ -132,6 +132,7 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
 - ~~[Paragon NTFS](https://www.paragon-software.com/home/ntfs-mac/) (paid, 20$)~~ [Mounty](https://mounty.app/) (no need to restart) -- Do everything with Windows drives on your Mac.
   - Another option: you can buy an OTG (On-The-go) adapter and connect the external drive using it without any problem. I used [Urgreen's](https://www.amazon.fr/gp/product/B072V9CNTK).
 - [Paintbrush](https://paintbrush.sourceforge.io/) -- a "Paint like" for macOS. A simple image editor for macOS.
+- **[New]** [PlayCover](https://www.playcover.me/) -- Run iOS apps & games. Fullscreen mode. Mouse, keyboard and controller support.
 - [Qbserve](https://qotoqot.com/qbserve/) (paid, 15 days trial) -- Activities tracker for MacOS. Record all of your activities on your Mac (and show in real time on menu bar) your productivity. I chose it because I can buy it forever without subscription and satisfies with its simple UI.
 - [qView](https://interversehq.com/qview/download/) -- cross platform photo viewer (continuously view photos in the same folder + simple viewer + no open old files,...)
 - [Raindrop](https://raindrop.io/download) -- bookmark manager.
