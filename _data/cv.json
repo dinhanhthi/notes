@@ -15,7 +15,9 @@
         ],
         "tech": [
           "angular",
+          "bash",
           "dialogflow",
+          "docker",
           "firebase",
           "gcp",
           "git",
@@ -30,6 +32,7 @@
           "nodejs",
           "postman",
           "python",
+          "pytorch",
           "rxjs",
           "scikit-learn",
           "tensorflow",
@@ -119,7 +122,7 @@
         "title": "Data Science",
         "date": "2019 — current",
         "activity": [
-          "I taught myself Data Science using online courses (Coursera, deeplearning.ai, Dataquest, Fastai, Oxford) and real projects."
+          "I've been learning myself Data Science using online courses (Coursera, deeplearning.ai, Dataquest, Fastai, Oxford) and real projects."
         ]
       },
       {
@@ -128,7 +131,7 @@
         "title": "Web Development",
         "date": "2013 — current",
         "activity": [
-          "I taught myself Web Development by making applications, websites and real projects."
+          "I've been learning myself Web Development by making applications, websites and real projects."
         ]
       },
       {
@@ -137,7 +140,7 @@
         "title": "Computer Science",
         "date": "2008 — current",
         "activity": [
-          "I taught myself CS by watching online video courses, reading books, and practicing programming on sites like Hackerrank."
+          "I've been learning myself CS by watching online video courses, reading books, and practicing programming on sites like Hackerrank."
         ]
       },
       {

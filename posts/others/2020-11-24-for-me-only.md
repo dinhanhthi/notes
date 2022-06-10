@@ -7,6 +7,7 @@ icon: "customize.svg"
 math: true
 keywords: "me for me only customize admin panel edition customize edit this site box font blocks for me only dinhanhthi dinh anh thi custom size emoji"
 noOutdated: true
+date: 2022-05-10
 ---
 
 This post is for me only. It contains shortcodes to create this website.
@@ -33,6 +34,7 @@ toc: true # `false` to hide toc
 notfull: true # if the post is not good enough
 hide: true # if don't want to show it on index and result engine
 private: true # (if the post comes from external source) a private link
+lowQuality: 1 # low quality notes (there will be a badge like "draft" notes)
 read: true # reading post type
 math: true # using math equations in note?
 good: true # (on hold) the note is good written
@@ -72,6 +74,10 @@ src/_includes/postslist.njk
 pages/tags.njk # tag page, also link to above file
 pages/search-index.json # search-index.json, may change also .eleventy.js
 ```
+
+## Insert icons
+
+Just use `{%raw%}{% icon "iconRef" %}` (mush have `""`). Supported `iconRef`s are: `time`, `danger`, `success`, `info`, `warning`.
 
 ## Insert figures
 

@@ -42,7 +42,7 @@ branch_2: A -- B -- C -- D -- E -- F -- G -- H
 **Best practice**: Create and sign in with a Gitkraken account. Don't worry if you have use the option "sign in with Google", you can create with that email too. After sign in via email (not via google), you can create and connect different profiles with different github accounts.
 :::
 
-Suppose that we work with `dinhanhthi@gmail.com` (personal) and `thi@ideta.io` (working). There are personal repos and working repos.
+Suppose that we work with `me@dinhanhthi.com` (personal) and `thi@ideta.io` (working). There are personal repos and working repos.
 
 1. Sign in to GK with ~~~any profile (suppose personal)~~~ Gitkraken account.
 2. Make 2 different profiles (one for personal, one for working).

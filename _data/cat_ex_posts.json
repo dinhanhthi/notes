@@ -56,20 +56,20 @@
     "private": true
   },
   {
-    "title": "JS discrete notes (Notion)",
+    "title": "JS discrete notes",
     "url": "https://thi-web-dev.notion.site/JS-101-e8d0d99495424c2384c769e48fb0745e",
     "tags": ["JavaScript"],
-    "notfull": true,
-    "keywords": "callback javascript js 101 basic fundamental angular sync async 101 fundamental",
-    "private": true
+    "notfull": false,
+    "keywords": "callback javascript js 101 basic fundamental angular sync async 101 fundamental contenteditable good practice random colors string replace split caret cursor timing promise.all await decorators ajax getter setter observable",
+    "private": false
   },
   {
-    "title": "RxJS 101",
-    "url": "https://www.notion.so/thi-web-dev/RxJS-ad50fc71015f4b04af9a33dcc9cb19ec",
+    "title": "RxJS discrete notes",
+    "url": "https://thi-web-dev.notion.site/RxJS-ad50fc71015f4b04af9a33dcc9cb19ec",
     "tags": ["JavaScript"],
     "notfull": true,
     "keywords": "rxjs Reactive Extensions for JavaScript async observable stream 101 fundamental",
-    "private": true
+    "private": false
   },
   {
     "title": "TypeScript 101",
@@ -90,10 +90,10 @@
   {
     "title": "Angular discrete note",
     "url": "https://thi-web-dev.notion.site/Angular-discrete-notes-379bd896d0434775afdc936401bc9e99",
-    "notfull": true,
+    "notfull": false,
     "private": false,
     "tags": ["Angular"],
-    "keywords": "angular discrete notes tips 101 combineLatest rxjs OnPush change detection SimpleChanges ViewEncapsulation host css classes"
+    "keywords": "angular discrete notes tips 101 combineLatest rxjs OnPush change detection SimpleChanges ViewEncapsulation host css classes contenteditable two-way binding select event ngFor trackBy combineLatest @input SimpleChanges subscribe trigger :host ViewEncapsulation css classes OnPush change detection innerHTML nativeElement reference santize sanitizedHTML"
   },
   {
     "title": "PvZ Battle For Neighborville",

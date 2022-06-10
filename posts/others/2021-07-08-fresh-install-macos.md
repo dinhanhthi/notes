@@ -4,8 +4,8 @@ title: "Fresh MacOS installation"
 tags: [Others, Fresh Installation, MacOS, Collection]
 toc: true
 icon: macos.svg
-date: 2021-12-27
-keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode bitwarden XCodes dark mode"
+keywords: "install new macbook setting up applications command line zsh terminal nodejs python brew shortcut cask nodejs node zsh oh-my-zsh xcode bitwarden XCodes dark mode canon printer mg2900"
+date: 2022-05-11
 ---
 
 This is my personal list of to-do things for a new Macbook.
@@ -67,6 +67,7 @@ Go to **Keyboard Settings** and then,
 1. Setting up **printers** (if available). You may need [Gutenprint](http://gimp-print.sourceforge.net/MacOSX.php) for an alternative driver for printers on chip M1. After installing the drivers, turn on your printer (connect to a common wifi or via an usb cable), then _System Preferences_ > _Printers & Scanners_ > Add printer and choose your own printer, don't forget to choose Gutenprint as driver!
 2. For **scanner** app: you can use VueScan (paid) if the current version of app doesn't support chip M1 yet!
 3. For **Canon MG2900** printer/scanner + apps: you may need to download and install drivers from [this site](https://brothersupportdownloads.blogspot.com/2020/06/canon-pixma-mg2900-scanner-driver.html). A backup files are [here](https://mega.nz/file/U0RwBR6T#qa50uOyhlAEiRtrMm_zBkXPtPufJD2Wa1gtbtkw5W_w). You may find other useful drivers for other types of printers on this site also.
+   - Change to use black & white only (or color only): System Preferences > Printers & Scanners > Choose the printer > Options & Supplies > Utility > Open Printer Utility > Ink Cartridge Settings > Black Only.
 4. **Scanner app**: use **Image Capture** (built-in app on Mac) or install **Canon IJ Scan Utility2**.
 
 ## **Finder**
@@ -107,10 +108,12 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
 
 ### **External apps**
 
+::: hsbox Show the list
+
 - [AppCleaner](https://freemacsoft.net/appcleaner/) -- uninstaller.
 - [Authy](https://authy.com/) -- Two factor authentication (Yes, use it instead of Google Authenticator or others!)
 - (Optional) [balenaEtcher](https://www.balena.io/etcher/) -- Flash OS images to SD cards & USB drives, safely and easily. In case you wanna make a bootable USB to install other OS.
-- [Bartender 4](https://www.macbartender.com/Bartender4/) (paid, 15.37$) -- hide some icons on menu bar.
+- [Bartender 4](https://www.macbartender.com/Bartender4/) (paid, 15.37$) -- hide some icons on menu bar. 💡 **Tip**: You can try the trial version and then click "Remind me later" and keep using the trial version without purchasing it.
 - [CleanMyMac](https://macpaw.com/cleanmymac) (paid) -- uninstaller + optimize your mac.
 - **Communication**: [Skype](https://www.skype.com/en/get-skype/), [Zoom](https://zoom.us/download), [Slack](https://slack.com/intl/en-fr/downloads/mac).
 - [Docker](https://docs.docker.com/docker-for-mac/apple-m1/)
@@ -121,7 +124,7 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
   1. Disable Tab Hover Cards: navigate to `chrome://flags/`, search for "tab hover" and choose "Disable".
   2. Add a site to use cookies (enable third-party cookies for downloading files on Google Drive): Go to `chrome://settings/cookies` and then "Add" `drive.google.com` (tick on third-party...) in "Sites that can always use cookies" section.
   3. Custom keyboard shortcut: System Preferences > Keyboard > Shortcuts > Application Shortcuts > "+" > Choose Chrome > Type the name EXACTLY THE SAME as the name in menu (for example "Inspect elements") > Add a custom shortcut.
-- [iTerm2](https://iterm2.com/) (check more in other section)
+- [iTerm2](https://iterm2.com/) (check more in other section). This is for a sticky terminal (after some configs). An alternative which is really beautiful is [Hyper](https://hyper.is/).
 - [Itsycal](https://www.mowglii.com/itsycal/) -- a dropdown calendar with agenda. After installing, you have to choose manually the agenda profiles you wanna show.
 - [Mojibar](https://github.com/muan/mojibar) - emoji indicator on menu bar. Install via `brew install mojibar`. Using [[⌃]] + [[⇧]] + [[⎵]] to open the window. A paid option is [Mumu](https://getmumu.com/) (20$). After install, press [[cmd]] + [[,]] to open preferences and then choose Skin tone to "None" (for me only).
 - [Molotov](https://www.molotov.tv/download) -- watch French TV online.
@@ -142,7 +145,11 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
 - [Youtube Music App](https://ytmusic.app/) for Mac (unofficial)
 - ~~[XtraFinder](https://www.trankynam.com/xtrafinder/) (additional settings for Finder)~~
 
+:::
+
 ### **Appstore**
+
+::: hsbox Show the list
 
 - **Amphetamine** -- Keep-awake your mac, an alternative to caffein on linux.
 - **Bitwarden** -- need to install desktop application to enable fingerprint unlock for browser extension. Restart both application and follow the instruction on extension to enable this feature.
@@ -157,6 +164,8 @@ defaults write com.apple.QuickTimePlayerX NSQuitAlwaysKeepsWindows -bool false
 - **Word** and **Powerpoint** (in Office 365 suit, paid). You can buy a lifetime license on ebay (not your own email but you can integrate yours later).
 - **Yomu** -- ebook reader.
 - **Vectornator** -- illustration, vector graphic design. A free alternative to Adobe Illustrator or Affinity Designer.
+
+:::
 
 ## **Terminal**
 

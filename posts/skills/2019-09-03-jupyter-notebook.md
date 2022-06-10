@@ -4,14 +4,14 @@ title: "Jupyter Notebook"
 tags: [Skills]
 toc: true
 icon: jupyter.png
-keywords: "pip conda hotkey magic function display side by side dataframes previous output hotkeys install packages multiline commands shortcuts pip conda figures markdown cell code cell check info system autoreload inline history description of a function IPython sys display_side_by_side version update upgrade jupyter notebook on remote server OSError: [Errno 99] Cannot assign requested address Running as root is not recommended localhost port ssh connection Cannot assign requested address list of variable environement toc extension table of content docker docker-compose SHA1 sha password hashed"
-date: 2021-10-29
+keywords: "pip conda hotkey magic function display side by side dataframes previous output hotkeys install packages multiline commands shortcuts pip conda figures markdown cell code cell check info system autoreload inline history description of a function IPython sys display_side_by_side version update upgrade jupyter notebook on remote server OSError: [Errno 99] Cannot assign requested address Running as root is not recommended localhost port ssh connection Cannot assign requested address list of variable environement toc extension table of content docker docker-compose SHA1 sha password hashed bash"
+date: 2022-05-15
 ---
 
 {% assign img-url = '/img/post/python' %}
 
-::: success
-If you use [VSCode](/visual-studio-code/), you should use its Jupyter Notebook extension, it's quick, clean and very easy to use.
+::: info
+{% icon "idea" %} If you use [VSCode](/visual-studio-code/), you should use its Jupyter Notebook extension, it's quick, clean and very easy to use.
 :::
 
 ## Installation
@@ -360,6 +360,55 @@ Get the commands from 1 to 4:
 %history -n 1-4 # get commands 1 to 4
 ~~~
 
+With the bash command line + and using also `curl`,
+
+👉 Note: [curl](/curl-rest-api/).
+
+```python
+%%bash -s $APP_NAME
+
+APP_NAME=$1
+
+cat > ./predictor/instances.json <<END
+{
+   "instances": [
+     {
+       "data": {
+         "b64": "WW91IGFyZW4ndCBraW5kLCBpIGhhdGUgeW91Lg=="
+       }
+     }
+   ]
+}
+END
+
+curl -s -X POST \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d @./predictor/instances.json \
+  http://localhost:7080/predictions/$APP_NAME/
+```
+
+::: hsbox Explain `$APP_NAME` above
+
+`%%bash -s $APP_NAME` will take the value of `APP_NAME` somewhere else and pass to `$1`.
+
+`APP_NAME=$1` will set the `APP_NAME` inside this block to the value of `$1` which is set in previous step.
+
+If you wanna use 2 variables?
+
+```python {% raw %}
+%%bash -s $VAR_1 $VAR_2
+
+VAR_1 = $1
+VAR_2 = $2
+{% endraw %}
+```
+
+:::
+
+::: info
+We can run bash script inside a cell with `! pip install numpy`.
+:::
+
 ## Extensions
 
 ### Table of contents
@@ -386,4 +435,9 @@ npm config set unicode false
 2. Install [this extension](https://github.com/jupyterlab/debugger).
 3. Refresh the page, you have to choose kernel _xpython_ (instead of _Python 3_) to use the debugger.
 
+## Convert notebook to HTML
 
+```bash
+pip install jupyterlab
+jupyter nbconvert --to html <notebook>
+```

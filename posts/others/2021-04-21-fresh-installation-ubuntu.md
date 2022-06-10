@@ -40,13 +40,13 @@ Most of commands are for both Ubuntu and Pop!\_OS, there are some which are only
     ```
 
 5. ~~Download and install [Google Chrome](https://www.google.com/chrome).~~ 👈 I use **[Brave](https://brave.com/)**
-   
+
    1. Sign in to Google Account + sync all extensions + settings.
    2. Disable Tab hover information: Go to [chrome://flags/](chrome://flags/) and search "tab hover" then choose "Disable".
    3. Install also these extensions:
       1. [mate translate](https://chrome.google.com/webstore/detail/mate-translate-%E2%80%93-translat/ihmgiclibbndffejedjimfjmfoabpcke), [google dictionary](https://chrome.google.com/webstore/detail/google-dictionary-by-goog/mgijmajocgfcbeboacabfgobmjgjcoja), [TabCloud](https://chrome.google.com/webstore/detail/tabcloud/npecfdijgoblfcgagoijgmgejmcpnhof), [raindrop](https://chrome.google.com/webstore/detail/raindropio/ldgfbffkinooeloadekpmfoklnobpien), [last pass](https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd), [AVIM](https://chrome.google.com/webstore/detail/avim-vietnamese-input-met/opgbbffpdglhkpglnlkiclakjlpiedoh), [adblock](https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom), [GNOME Shell integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep).
       2. Google Aut alternative on Chrome: use [this](https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai).
-   
+
 6. Install [Guake Terminal](/terminal#guake-terminal) (drop-down terminal supporting tabs). We install it first because we working mainly on terminal.
 
    ```bash
@@ -76,19 +76,19 @@ Most of commands are for both Ubuntu and Pop!\_OS, there are some which are only
    ```bash
    # Tell who you are
    git config --global user.name "Thi"
-   git config --global user.email "dinhanhthi@gmail.com"
+   git config --global user.email "me@dinhanhthi.com"
    ```
 
    ```bash
    # Create a new ssh
    # Windows + Linux
-   ssh-keygen -t rsa -b 4096 -C "dinhanhthi@gmail.com"
+   ssh-keygen -t rsa -b 4096 -C "me@dinhanhthi.com"
    # (-C for adding comment only)
    # Enter a file:
    # Linux: /home/thi/.ssh/id_rsa
    # Windows: C:\Users\dinha\.ssh\id_rsa
    # Enter password
-   
+
    cat /home/thi/.ssh/id_rsa.pub
    # copy the public key
    # then go to: https://github.com/settings/keys to add this key

@@ -96,7 +96,7 @@ Just buy an adapter (USB-C to HDMI & USB-A & USB-C), I use [Y Team's](https://ww
 
 **Be careful**: make sure the adapter you buy work with the switch !!!
 
-## Connect Xbox / PS4 / PS5 to connect with Switch?
+## Connect Xbox / PS4 / PS5 Controller to Switch?
 
 1. Buy an adapter. I use [MAYFLASH Magic NS Wireless Bluetooth Controller](https://www.amazon.fr/gp/product/B079B5KHWQ).
 2. (Just follow the instruction on the adapter)
@@ -108,7 +108,9 @@ Just buy an adapter (USB-C to HDMI & USB-A & USB-C), I use [Y Team's](https://ww
 
 ## Should you buy a third-party Joy-con?
 
-**DON NOT**! Rather buy Nintendo's ==because they are easy to pair and have a long battery life!== I know they are expensive but they are worth it!
+**DO NOT**! Rather buy Nintendo's ==because they are easy to pair and have a long battery life!== I know they are expensive but they are worth it!
+
+**Except** the case you wanna play the game like FPS, Fifa, they need some thing like Controller Pro. You cannot play well with default joy-con (my personal experience). I didn't try any of them, Hori Split Pad Pro may be a good option.
 
 ## Pair bluetooth speakers when playing many bluetooth controllers
 

@@ -124,7 +124,7 @@ model.summary() # model detail
 ``` bash
 Model: "sequential_1"
 _________________________________________________________________
-Layer (type)                 Output Shape              Param #
+Layer (type)                 Output Shape              Param
 =================================================================
 conv2d (Conv2D)              (None, 26, 26, 64)        640
                              # for every image, 64 convolution has been tried

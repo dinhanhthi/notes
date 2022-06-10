@@ -5,7 +5,7 @@ tags: [Skills]
 toc: true
 icon: vsc.png
 keywords: "visual studio code vsc regex regular expression ssh remote server character combining font ligatures couple characters symbols letters new characters installation install extension plugin add extra path to auto complete reStructuredText rst markdown extension pythonremote regular expression regex vscode live server scss css compiler autopep8 formatter"
-date: 2022-01-31
+date: 2022-05-23
 ---
 
 ## Install
@@ -178,7 +178,7 @@ Read [this tutorial](https://code.visualstudio.com/blogs/2019/07/25/remote-ssh).
 ::: hsbox Could not establish connection to "undefined". Could not resolve hostname.
 
 ```bash
-# 
+#
 # ref: https://github.com/microsoft/vscode-remote-release/issues/1047
 
 # Open config ssh file
@@ -244,7 +244,7 @@ In the current workspace > Go to "*Preferences*" > *Settings* > Click on tab "*W
 
 ```bash
 # Only available to js and typescript files
-# Usage: type "logt" to add 
+# Usage: type "logt" to add
 # /*###Thi*/ console.log(...);
 "[JS] Print to console": {
   "scope": "javascript,typescript",
@@ -364,7 +364,8 @@ If you wanna open terminal below the 2nd screen in the vertical split screen mod
 
 One can change the default keyboard shortcut by going to: **File** > **Preferences** > **Keyboard Shortcuts**.
 
-{:.indent}
+::: hsbox Show the list
+
 - Quick search file: [[Ctrl]] + [[P]].
 - Get back to previous views: [[Ctrl]] + [[Alt]] + [[-]] (Linux), [[Alt]] + [[<]] (Windows), [[Ctrl]] + [[-]] (MacOS).
 - Get forward: [[Ctrl]] + [[Shift]] + [[-]] (Linux), [[Alt]] + [[>]] (Windows), [[Ctrl]] + [[Shift]] + [[-]] (MacOS).
@@ -372,3 +373,7 @@ One can change the default keyboard shortcut by going to: **File** > **Preferenc
 - Go to line: [[Ctrl]] + [[Shift]] + [[P]] then _Go to line_.
 - Format entire doc: (Win/Linux) [[Ctrl]] + [[Shift]] + [[I]]; (Mac) [[⇧]] + [[⌥]] + [[F]].
 - Format selected text: (Win/Linux) [[Ctrl]] + [[K]] then [[K]] + [[F]]; (Mac) [[⌘]] + [[K]] then [[⌘]] + [[F]].
+- Quickly move a line up/down: [[Alt]] + [[up]] / [[down]] (Mac).
+- Quickly duplicate current line: [[Shift]] + [[Alt]] + [[down]] (Mac).
+
+:::
