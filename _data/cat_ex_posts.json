@@ -13,7 +13,7 @@
   },
   {
     "title": "DL 4 - CNN",
-    "url": "https://thi-ds.notion.site/CNN-by-deeplearning-ai-888f4235aac54dd1ac4f4d34af126e04",
+    "url": "https://thi-cs.notion.site/CNN-by-deeplearning-ai-888f4235aac54dd1ac4f4d34af126e04",
     "notfull": false,
     "hide": false,
     "tags": ["MOOC", "CNN", "Deep Learning", "deeplearning.ai"],
@@ -21,13 +21,13 @@
   },
   {
     "title": "DL 5 - Sequence models",
-    "url": "https://thi-ds.notion.site/Sequence-models-by-deeplearning-ai-2336322777b54bb6bd4528b99202ad79",
+    "url": "https://thi-cs.notion.site/Sequence-models-by-deeplearning-ai-2336322777b54bb6bd4528b99202ad79",
     "tags": ["MOOC", "Deep Learning", "deeplearning.ai", "RNN", "NLP"],
     "keywords": "natural language processing coursera"
   },
   {
     "title": "NLP by HSE University",
-    "url": "https://thi-ds.notion.site/NLP-by-HSE-9e83f31c193347cb8ac450994a8d3c4e",
+    "url": "https://thi-cs.notion.site/NLP-by-HSE-9e83f31c193347cb8ac450994a8d3c4e",
     "tags": ["MOOC", "NLP", "Deep Learning"],
     "notfull": true,
     "private": true,
@@ -49,7 +49,7 @@
   },
   {
     "title": "Angular 101",
-    "url": "https://thi-web-dev.notion.site/Angular-101-ec0468f04c674f8b8665353b468e555e",
+    "url": "https://thi-cs.notion.site/Angular-101-ec0468f04c674f8b8665353b468e555e",
     "tags": ["Angular"],
     "notfull": true,
     "keywords": "angular ng ngx node js 101 directives modules components view theme frameworks frontend front front end 101 fundamental",
@@ -57,7 +57,7 @@
   },
   {
     "title": "JS discrete notes",
-    "url": "https://thi-web-dev.notion.site/JS-101-e8d0d99495424c2384c769e48fb0745e",
+    "url": "https://thi-cs.notion.site/JS-discrete-notes-d40c5d2df14c4ed0a47e20b8a22f0d08",
     "tags": ["JavaScript"],
     "notfull": false,
     "keywords": "callback javascript js 101 basic fundamental angular sync async 101 fundamental contenteditable good practice random colors string replace split caret cursor timing promise.all await decorators ajax getter setter observable",
@@ -65,23 +65,23 @@
   },
   {
     "title": "RxJS discrete notes",
-    "url": "https://thi-web-dev.notion.site/RxJS-ad50fc71015f4b04af9a33dcc9cb19ec",
+    "url": "https://thi-cs.notion.site/RxJS-discrete-notes-eb08e874b41240a684f570134a7fb0b4",
     "tags": ["JavaScript"],
     "notfull": true,
     "keywords": "rxjs Reactive Extensions for JavaScript async observable stream 101 fundamental",
     "private": false
   },
   {
-    "title": "TypeScript 101",
-    "url": "https://www.notion.so/thi-web-dev/TypeScript-101-4c398f25eee94baba017ade8b28648dc",
+    "title": "TypeScript discrete notes",
+    "url": "https://thi-cs.notion.site/TypeScript-discrete-notes-c8dfc88beeeb444b9cadd1218386b649",
     "tags": ["JavaScript"],
     "notfull": true,
     "keywords": "angular typescript ts javascript type superset microsoft 101 fundamental",
-    "private": true
+    "private": false
   },
   {
     "title": "Angular Unit Tests",
-    "url": "https://thi-web-dev.notion.site/Angular-Unit-Testing-4665ec0d7aec40eb9ea3710296eb1693",
+    "url": "https://thi-cs.notion.site/Angular-Unit-Testing-4665ec0d7aec40eb9ea3710296eb1693",
     "notfull": true,
     "private": false,
     "tags": ["Angular", "Unit Test"],
@@ -89,7 +89,7 @@
   },
   {
     "title": "Angular discrete note",
-    "url": "https://thi-web-dev.notion.site/Angular-discrete-notes-379bd896d0434775afdc936401bc9e99",
+    "url": "https://thi-cs.notion.site/Angular-discrete-notes-e6f59fe5ddbd488b8b8fb0f4ce3d039c",
     "notfull": false,
     "private": false,
     "tags": ["Angular"],
