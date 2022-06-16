@@ -1,5 +1,11 @@
 [
   {
+    "name": "Blog",
+    "svg": "/img/cats/blog.svg",
+    "fontello": "icon-feather",
+    "color": "#7bcf8e"
+  },
+  {
     "name": "Project-based Learning",
     "color": "#e97c8e",
     "svg": "/img/cats/project.svg",
