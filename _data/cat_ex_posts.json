@@ -102,5 +102,13 @@
     "private": false,
     "tags": ["Gaming & Puzzles"],
     "keywords": "gaming relax others switch nintendo pvz plant vs zombie plants vs zombies battle for neighborville fps"
+  },
+  {
+    "title": "Google Cloud CLI",
+    "url": "https://www.notion.so/thi-cs/gcloud-commands-f417c0cca00f4855b4e9fb2b7a785d90",
+    "notfull": true,
+    "private": false,
+    "tags": ["API & Services"],
+    "keywords": "cli command line interface gcloud google cloud cli apis terminal"
   }
 ]

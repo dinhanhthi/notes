@@ -192,7 +192,7 @@ Go to `http://4c1f-34-79-165-21.ngrok.io` and see the result!
 You have to use **User-managed notebook**! **Managed notebook** doesn't allow you to use SSH (officially).  If you wanna connect via SSH for **managed notebook**, read [next  section](#ssh-managed).
 :::
 
-First, connect using `gcloud` 👉 Note: [Google Cloud CLI](/google-cloud-cli/).
+First, connect using `gcloud` 👉 Note: [Google Cloud CLI](https://www.notion.so/thi-cs/gcloud-commands-f417c0cca00f4855b4e9fb2b7a785d90).
 
 👉 Note: [SSH](/ssh/)
 
@@ -1039,6 +1039,50 @@ When pushing the image to the Container Registry, check [this link](https://clou
 
 {% endhsbox %}
 
+## Container Registry to Artifact Registry
+
+**Step 1**: Artivate Artifact Registry API.
+
+**Step 2**: Go to [Artifacet Registry](https://console.cloud.google.com/artifacts). If you see any warning like "*You have gcr.io repositories in Container Registry. Create gcr.io repositories in Artifact Registry?", click **CREATE GCR. REPOSITORIES**.
+
+**Step 3**: Copy images from Container Registry to Artifact Registry. What you need is the URLs of "from" CR and "to" AR.
+
+- Check in page AR, there is small warning icon ⚠️, hover it to see the "not complete" url. Example: *Copy your images from `eu.gcr.io/ideta-ml-thi` to `europe-docker.pkg.dev/ideta-ml-thi/eu.gcr.io`*
+- Check in page CR, click the button copy, a full url of the image will be copied to clipboard, eg. *gcr.io/ideta-ml-thi/pt-xlm-roberta-large-xnli_3*
+- Finally, combine them with the tag (use `:lastest` if you don't have others already).
+- Example, from `gcr.io/ideta-ml-thi/pt-xlm-roberta-large-xnli_3:latest` to `us-docker.pkg.dev/ideta-ml-thi/gcr.io/pt-xlm-roberta-large-xnli_3:latest`.
+
+👉 [Transitioning to repositories with gcr.io domain support](https://cloud.google.com/artifact-registry/docs/transition/setup-gcr-repo) (also on this link, [copy from container to artifact](https://cloud.google.com/artifact-registry/docs/transition/setup-gcr-repo?authuser=2&_ga=2.126103373.-1545638870.1642178012#copy))
+
+::: hsbox If you use `gcrane` (this tool is recommended by Google)
+
+Next, [install `gcrane` tool](https://github.com/google/go-containerregistry/tree/main/cmd/gcrane). (It uses "go"). In case you just want to use directly, you can [download it](https://github.com/google/go-containerregistry/releases/tag/v0.9.0), then put it in the `$PATH` in your `.bashrc` or `.zshrc`. On MacOS, don't forget to go to System Preferences > Securitty & Privacy > Run it anyway.
+
+Finally,[Read this official guide](https://cloud.google.com/artifact-registry/docs/docker/copy-from-gcr?authuser=2#copy-gcrane).
+
+:::
+
+
+::: hsbox If you use `gcloud`
+
+**Good practice**: Use Cloud Shell instead.
+
+```bash
+# Change to the current project with gcloud
+gcloud config set project <project-id>
+```
+
+👉 Follow [this official guide](https://cloud.google.com/artifact-registry/docs/docker/copy-from-gcr?authuser=2#copy-gcloud).
+
+```bash
+gcloud container images add-tag gcr.io/ideta-ml-thi/name-of-image:latest us-docker.pkg.dev/ideta-ml-thi/gcr.io/name-of-image:latest
+```
+
+**Remark**: It takes a long time to run in background. ==Don't close the terminal window!!== That's why we should (or shouldn't?) try Cloud Shell instead.
+
+:::
+
+**Step 4**: Route to AR (After step 3, the iamges in AR has the same route as in CR but the traffic only regconize it from CR. We need this step to make all traffics use AR's instead). You need [these permissions](https://cloud.google.com/artifact-registry/docs/transition/setup-gcr-repo?authuser=2&_ga=2.36757728.-1545638870.1642178012#redirect-enable) to perform the action (click the button ROUTE TO ARTIFACT).
 
 ## Problems?
 

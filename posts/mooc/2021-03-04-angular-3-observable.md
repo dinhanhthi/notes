@@ -15,6 +15,7 @@ This is my note for the course "[Angular - The Complete Guide (2021 Edition)](ht
 🍄 **PART 2** — [Angular 2 - Services & Dependency Injection & Routing](/angular-2-service-dependency-injection-routing/)
 🍄 **PART 3** — [Angular 3 - Observable](/angular-3-observable/)
 🍄 **PART 4** —  [Angular 4 - Forms](/angular-4-forms/)
+
 👉 [Github repo](https://github.com/dinhanhthi/learn-angular-complete-guide)
 👉 **Other note** (taken before this course): [Angular 101](https://www.notion.so/Angular-101-fcbd5683f8e941f89c709595792b62d2)
 👉 Other note: [RxJS](https://www.notion.so/RxJS-b4bc7e2d1f7d49b79d4cb701785e355f).
