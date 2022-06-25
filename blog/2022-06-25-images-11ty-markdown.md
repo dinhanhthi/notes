@@ -27,12 +27,12 @@ dinhanhthi.com
 |- _built/ # The output folder (11ty renders markdown files to this) 
 |- .eleventy.js
 |- notes/
-	 |- blog/ # contains all markdown files
-	 	  |- 2022-06-25-name-of-post.md
-	 |- img_blog/ # contains all images
-	 		|- 2022-06-25-name-of-post/ # the same name as markdown file
-	 			 |- figure-1.png
-	 			 |- figure-2.png
+  |- blog/ # contains all markdown files
+     |- 2022-06-25-name-of-post.md
+  |- img_blog/ # contains all images
+     |- 2022-06-25-name-of-post/ # the same name as markdown file
+        |- figure-1.png
+        |- figure-2.png
 
 ```
 
@@ -106,11 +106,11 @@ They look the same, but in fact they are not. Let's check the folder `_built/`,
 ```bash
 dinhanhthi.com
 |- _built/
-	|- name-of-post/
-	|  |- index.html
+  |- name-of-post/
+  |  |- index.html
   |- img_blog/
-  	 |- 2022-06-25-name-of-post-name-of-post/
-  	 		|- name-of-image.png
+  |- 2022-06-25-name-of-post-name-of-post/
+     |- name-of-image.png
 ```
 
 Because in the `.eleventy.js`, we have set `addPassthroughCopy` from `notes/img_blog/` to `img_blog/`, we have `_built/img_blog/` after rendering.
@@ -124,11 +124,11 @@ dinhanhthi.com
 |- _built/
 |- .eleventy.js
 |- notes/
-	 |- blog/ 
-	 	  |- 2022-06-25-name-of-post.md
-	 |- img_blog/
-	 		|- 2022-06-25-name-of-post/
-	 			 |- name-of-image.png
+   |- blog/ 
+      |- 2022-06-25-name-of-post.md
+   |- img_blog/
+      |- 2022-06-25-name-of-post/
+         |- name-of-image.png
 ```
 
 It works in the html file because **the relative path of the image to the `index.html` file** is `../img_blog/` too.
