@@ -5,9 +5,9 @@ tags: [Others, Static Site Generators, 11ty]
 toc: true
 icon: "customize.svg"
 math: true
-keywords: "me for me only customize admin panel edition customize edit this site box font blocks for me only dinhanhthi dinh anh thi custom size emoji"
+keywords: "me for me only customize admin panel edition customize edit this site box font blocks for me only dinhanhthi dinh anh thi custom size emoji dinh anh thi"
 noOutdated: true
-date: 2022-05-10
+date: 2022-06-25
 ---
 
 This post is for me only. It contains shortcodes to create this website.
@@ -40,7 +40,21 @@ math: true # using math equations in note?
 good: true # (on hold) the note is good written
 noOutdated: true # this kind of post doesn't have "outdated" warning box
 customJS: ["toggle-notes.js"] # for custom js files which are stored in _includes/scripts/
+noHeadingNumbering: true # if you don't want to number headings (default, all blog posts have this)
 ```
+
+## For blog posts
+
+### Insert images
+
+Using Typora and configure its *Preferences/Imgage* as
+
+- When insert, *Copy image to custom folder* (choose `notes/img_blog/${filename}`)
+- Tick "Apply above rules to local images", "Apply ... online images", "Use relative path if possible
+- **Local image**: using the button in Typora.
+- **Online image**: just type `![description]()` and then paste the url inside `()`.
+
+For other
 
 ## Other components
 
@@ -70,7 +84,7 @@ Files need to be changed for this sections:
 ``` bash
 src/_data/cat_ex_position.json # posts (must have enough tags for each post)
 index.njk # links to below file
-src/_includes/postslist.njk
+src/_includes/postsList.njk
 pages/tags.njk # tag page, also link to above file
 pages/search-index.json # search-index.json, may change also .eleventy.js
 ```

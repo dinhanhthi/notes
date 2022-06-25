@@ -15,6 +15,7 @@ date: 2022-05-17
 :::
 
 👉 My Github Repo for this note: [dinhanhthi/google-vertex-ai](https://github.com/dinhanhthi/google-vertex-ai)
+👉  [All services needed for Data Science on Google Cloud.](https://cloud.google.com/data-science)
 
 ## Good to know
 
@@ -77,6 +78,11 @@ date: 2022-05-17
 | [Schedule notebook run](https://cloud.google.com/vertex-ai/docs/workbench/managed/schedule-managed-notebooks-run-quickstart) | Yes                                                          | **No**                                           |
 | Connect with [Compute Engine](https://cloud.google.com/compute/docs) | **No**                                                       | Yes                                              |
 | [Health status monitoring](https://cloud.google.com/vertex-ai/docs/workbench/user-managed/monitor-health) | No                                                           | Yes                                              |
+| Use third-party jupyter lab extension                        | No                                                           | Yes                                              |
+| Apply a custom script after creating new instance            | No                                                           | **Yes**                                          |
+| Use a custom docker image (for a custom kernel in jupyter notebook, ==alongside with prebuilt things==) | **Yes**                                                      | No                                               |
+| Can edit type of machine + GPU                               | Yes                                                          | Yes                                              |
+| Can edit storage                                             | No                                                           | Yes                                              |
 
 :::
 
@@ -291,20 +297,19 @@ su - jupyter # log in again
 Then, install `oh-my-zsh`,
 
 ```bash
-sh -c \
-  "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-You have to add conda path to `.zshrc`,
+Then install `spacehip` theme (optional),
 
 ```bash
-nano ~/.zshrc
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 
-# Then add the following to the end of the file
-export PATH="/opt/conda/bin:$PATH"
-# After that Ctrl + X > Y > Enter to save
-source ~/.zshrc
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
+
+👉 [An example of simple `.zshrc` file.](https://gist.github.com/dinhanhthi/cae72fea9aa5cdf0442185cdea9457d9)
+
 :::
 
 ### SSH to managed notebook{:#ssh-managed}

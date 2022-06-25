@@ -5,7 +5,7 @@ tags: [MLOps, Docker, Backend]
 toc: true
 icon: docker.svg
 keywords: "pybash tania rascia CI CD continuous integration deployment pipeline docker idea how to use airflow kubernetes k8s k apache container images dangling images vscode vsc visual studio code ssh container env environnement file variable nvidia docker runtime gpus tensorflow torch"
-date: 2022-04-21
+date: 2022-06-23
 ---
 
 {% assign img-url = '/img/post/deploy/docker' %}
@@ -186,7 +186,7 @@ sudo apt-get install -y nvidia-docker2
 
 ```bash
 # Error?
-# Read more: 
+# Read more:
 # Depends: nvidia-container-toolkit (>= 1.9.0-1) but 1.5.1-1pop1~1627998766~20.04~9847cf2 is to be installed
 
 # create a new file
@@ -395,7 +395,25 @@ sudo nvidia-smi --gpu-reset -i 0
 # train_function
 ```
 
-Check [this answer](https://stackoverflow.com/a/56511889/1323473) as a reference!
+👉 Check [this answer](https://stackoverflow.com/a/56511889/1323473) as a reference!
+
+👇 [Use a GPU](https://www.tensorflow.org/guide/gpu).
+
+```python
+# Limit the GPU memory to be used
+gpus = tf.config.list_physical_devices('GPU')
+if gpus:
+  # Restrict TensorFlow to only allocate 1GB of memory on the first GPU
+  try:
+    tf.config.set_logical_device_configuration(
+        gpus[0],
+        [tf.config.LogicalDeviceConfiguration(memory_limit=1024)])
+    logical_gpus = tf.config.list_logical_devices('GPU')
+    print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+  except RuntimeError as e:
+    # Virtual devices must be set before GPUs have been initialized
+    print(e)
+```
 
 ---
 
@@ -428,7 +446,7 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 	``` bash
 	# list all gpus
 	lspci -nn | grep '\[03'
-	
+
 	# check nvidia & cuda versions
 	nvidia-smi
 	```
@@ -437,11 +455,11 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 	``` bash
 	curl -s -L https://nvidia.github.io/nvidia-container-runtime/gpgkey | sudo apt-key add -
 	distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-	
+
 	curl -s -L https://nvidia.github.io/nvidia-container-runtime/$distribution/nvidia-container-runtime.list | sudo tee /etc/apt/sources.list.d/nvidia-container-runtime.list
-	
+
 	sudo apt-get update
-	
+
 	sudo apt-get install nvidia-container-runtime
 	```
 3. Note that, <mark markdown='span'>we cannot use `docker-compose.yml` in this case!!!</mark>
@@ -449,17 +467,17 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 
 	``` docker
 	FROM nvidia/cuda:10.2-base
-	
+
 	RUN apt-get update && \
 		apt-get -y upgrade && \
 		apt-get install -y python3-pip python3-dev locales git
-	
+
 	# install dependencies
 	COPY requirements.txt requirements.txt
 	RUN python3 -m pip install --upgrade pip && \
 		python3 -m pip install -r requirements.txt
 	COPY . .
-	
+
 	# default command
 	CMD [ "jupyter", "lab", "--no-browser", "--allow-root", "--ip=0.0.0.0"  ]
 	```
@@ -467,7 +485,7 @@ This section is still working (on 26-Oct-2020) but it's old for newer methods.
 
 	``` bash
 	docker run --name docker_thi --gpus all -v /home/thi/folder_1/:/srv/folder_1/ -v /home/thi/folder_1/git/:/srv/folder_2 -dp 8888:8888 -w="/srv" -it img_datas
-	
+
 	# -v: volumes
 	# -w: working dir
 	# --gpus all: using all gpus on base machine

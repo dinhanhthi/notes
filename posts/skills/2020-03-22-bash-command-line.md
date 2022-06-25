@@ -5,7 +5,7 @@ tags: [Skills, Linux, Shell]
 toc: true
 icon: terminal.svg
 keywords: "cmder cmd terminal powershell macos mac linux ubuntu windows vim editor download wget check ip permission administrator block compress file zip rar unzip RAM CPU printenv environmental variables alias quick command quick shortcut multiple commands and script bash print print tree folder files structure windows terminal sh file kill running port parent"
-date: 2022-01-25
+date: 2022-06-20
 ---
 
 Bash commands are mainly supported in MacOS, Linux but also support in Windows. You can use integrated tools for using bash on these platforms.
