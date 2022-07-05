@@ -11,7 +11,7 @@ date: 2022-05-17
 {% assign img-url = '/img/post/api/vertex' %}
 
 ::: info
-{% icon "info" %} Like other notes on this site, this note contains only a few noteworthy points of the topic.
+Like other notes on this site, this note contains only a few noteworthy points of the topic.
 :::
 
 👉 My Github Repo for this note: [dinhanhthi/google-vertex-ai](https://github.com/dinhanhthi/google-vertex-ai)
@@ -39,12 +39,12 @@ date: 2022-05-17
 
 ## Notebooks (Workbench)
 
-::: info
-{% icon "idea" %} If you are going to create images with `docker` inside the virtual machine, ==you should choose **more** boot disk space== (default = 100GB but you should choose more than that). In case you wanna change the size of disk, you can go to [Compute Engine / Disks](https://console.cloud.google.com/compute/disks){% ref "https://cloud.google.com/compute/docs/disks/resize-persistent-disk#resize_the_disk" %}.
+::: tip
+If you are going to create images with `docker` inside the virtual machine, ==you should choose **more** boot disk space== (default = 100GB but you should choose more than that). In case you wanna change the size of disk, you can go to [Compute Engine / Disks](https://console.cloud.google.com/compute/disks){% ref "https://cloud.google.com/compute/docs/disks/resize-persistent-disk#resize_the_disk" %}.
 :::
 
 ::: danger
-{% icon "danger" %} Remember to shutdown the notebook if you don't use it!!
+Remember to shutdown the notebook if you don't use it!!
 :::
 
 ### Workbench notebook vs Colab
@@ -250,8 +250,8 @@ On your local machine,
 ssh -i /Users/thi/.ssh/id_rsa.ideta jupyter@<ip_of_notebook>
 ```
 
-::: info
-{% icon "idea" %} The ip of the instance will change each time you reset the instance. Go to the Compute Engine section to check the up-to-date ip address.
+::: tip
+The ip of the instance will change each time you reset the instance. Go to the Compute Engine section to check the up-to-date ip address.
 :::
 
 You are good. **On VScode**, you make the same things with the extension **Remote - SSH**.
@@ -352,9 +352,7 @@ ssh -i ~/.ssh/id_rsa jupyter@<ip-returned-in-previous-step>
 **Remark**: This section is almost for me only (all the steps here are already described in previous steps).
 
 ::: danger
-
-{% icon "danger" %} Remember to shutdown the notebook if you don't use it!!
-
+Remember to shutdown the notebook if you don't use it!!
 :::
 
 {% hsbox "Show the content" %}

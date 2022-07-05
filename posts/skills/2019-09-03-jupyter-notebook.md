@@ -10,8 +10,8 @@ date: 2022-05-15
 
 {% assign img-url = '/img/post/python' %}
 
-::: info
-{% icon "idea" %} If you use [VSCode](/visual-studio-code/), you should use its Jupyter Notebook extension, it's quick, clean and very easy to use.
+::: tip
+If you use [VSCode](/visual-studio-code/), you should use its Jupyter Notebook extension, it's quick, clean and very easy to use.
 :::
 
 ## Installation

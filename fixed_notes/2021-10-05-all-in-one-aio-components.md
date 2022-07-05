@@ -7,7 +7,7 @@ math: true
 icon: "/img_src/header/aio.svg"
 keywords: "AIO all in one components post types boxes hide show hide/show linke url insert images 11ty eleventy topics all topics subjects code blocks boxes math equations"
 noOutdated: true
-date: 2022-05-13
+date: 2022-07-05
 ---
 
 This note is used to show the compoents I created to use in this site. It's for me only. I use it as a reference when I wanna create some components for the notes.
@@ -101,7 +101,7 @@ Content
 
 <div class="info">
 
-**Info**: This one uses directly html markups.
+**Info**: This one uses directly html markups and doesn't have any icon like the others.
 
 ::: hsbox Hide / Show box inside
 Content
@@ -113,38 +113,6 @@ Content
 ::: hsbox Hide / Show box inside
 Content
 :::
-
-### Alert boxes with icons
-
-::: danger
-{% icon "danger" %} This uses shortcode `{% raw %}{% icon "danger" %}{% endraw %}`.
-:::
-
-::: info
-{% icon "info" %} This uses shortcode `{% raw %}{% icon "info" %}{% endraw %}`.
-:::
-
-::: info
-{% icon "draft" %} This uses shortcode `{% raw %}{% icon "draft" %}{% endraw %}`.
-:::
-
-::: info
-{% icon "idea" %} This uses shortcode `{% raw %}{% icon "idea" %}{% endraw %}`.
-:::
-
-::: warning
-{% icon "warning" %} This uses shortcode `{% raw %}{% icon "warning" %}{% endraw %}`. I wanna make a very long sentence to see how this icon will be placed in the paragraph.
-:::
-
-::: success
-{% icon "success" %} This uses shortcode `{% raw %}{% icon "success" %}{% endraw %}`.
-:::
-
-::: info
-{% icon "time" %} This uses shortcode `{% raw %}{% icon "time" %}{% endraw %}`.
-:::
-
-Check line `eleventyConfig.addShortcode("icon"` in `.eleventy.js` for more icon names.
 
 ### Inside other components
 
@@ -689,6 +657,12 @@ Inside a list,
 - Item
 
 ## Insert figures
+
+### Insert inline icons
+
+Available icons: {% icon "warning" %}, {% icon "info" %}, {% icon "danger" %}, {% icon "success" %}, {% icon "draft" %}, {% icon "idea" %}, {% icon "time" %}.
+
+Check line `eleventyConfig.addShortcode("icon"` in `.eleventy.js` for more icon names.
 
 ### Different sizes
 

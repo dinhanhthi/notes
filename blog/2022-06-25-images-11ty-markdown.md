@@ -2,9 +2,12 @@
 layout: blog
 title: "Working with images in markdown files and 11ty"
 description: "Best practices for working with images from capturing or internet in markdown files and eleventy. This is the workflow I use for this website."
-tags: [Blog, Web Dev, Static Site Generators, 11ty]
-keywords: "images photos 11ty eleventy markdown md plugins typora editor copy paste"
+tags: [Web Dev, Static Site Generators, 11ty]
+toc: true
+keywords: "images photos 11ty eleventy markdown md plugins typora editor copy paste markdown"
 ---
+
+👉 Note: [11ty & Nunjucks](/11ty-nunjucks/).
 
 ## 🎯 What we want?
 
@@ -15,7 +18,7 @@ keywords: "images photos 11ty eleventy markdown md plugins typora editor copy pa
 
 You will need to install the following tools. Depending on your working style, you can choose one or both of them.
 
-- [Typora](https://typora.io/) (WYSWYG).
+- [Typora](https://typora.io/) (what you see is what you get).
 - [VSCode](https://code.visualstudio.com/) (with extensions [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) and [Markdown Image](https://marketplace.visualstudio.com/items?itemName=hancel.markdown-image)).
 
 ## Setting up your project structure
@@ -24,7 +27,7 @@ Below is an example of the folder structure on my website. Read [this section](#
 
 ```bash
 dinhanhthi.com
-|- _built/ # The output folder (11ty renders markdown files to this) 
+|- _built/ # The output folder (11ty renders markdown files to this)
 |- .eleventy.js
 |- notes/
   |- blog/ # contains all markdown files
@@ -49,7 +52,7 @@ You need to make 11ty recognize "blog" and "img_blog".
 module.exports = function (eleventyConfig) {
   // For images
   eleventyConfig.addPassthroughCopy({ "notes/img_blog": "img_blog" });
-  
+
   return {
 		// other settings
     dir: {
@@ -83,9 +86,9 @@ Go to Typora Preferences and make the same settings as below,
 
 ## Why it works?{:#why-it-works}
 
-::: info
+::: tip
 
-{% icon "idea" %} Based on how an [SSG](/tags/static-site-generators/) works, you can use the same idea in this post to get the same workflow for other [SSGs](/tags/static-site-generators/) other than [11ty](/tags/11ty/) ([Jekyll](/jekyll-tips/), Hugo, Gatsby,...).
+Based on how an [SSG](/tags/static-site-generators/) works, you can use the same idea in this post to get the same workflow for other [SSGs](/tags/static-site-generators/) other than [11ty](/tags/11ty/) ([Jekyll](/jekyll-tips/), Hugo, Gatsby,...).
 
 :::
 
@@ -115,7 +118,7 @@ dinhanhthi.com
 
 Because in the `.eleventy.js`, we have set `addPassthroughCopy` from `notes/img_blog/` to `img_blog/`, we have `_built/img_blog/` after rendering.
 
-It works in markdown editors (VSCode, Typora, Github,...) because **the relative path of the image to the markdown file** is `../img_blog/`.
+==It works in markdown editors (VSCode, Typora, Github,...) because **the relative path of the image to the markdown file** is `../img_blog/`.==
 
 Check again our project structure,
 
@@ -124,13 +127,13 @@ dinhanhthi.com
 |- _built/
 |- .eleventy.js
 |- notes/
-   |- blog/ 
+   |- blog/
       |- 2022-06-25-name-of-post.md
    |- img_blog/
       |- 2022-06-25-name-of-post/
          |- name-of-image.png
 ```
 
-It works in the html file because **the relative path of the image to the `index.html` file** is `../img_blog/` too.
+==It works in the html file because **the relative path of the image to the `index.html` file** is `../img_blog/` too.==
 
 In short, you have to make sure that the relative path of the image to the markdown file is the same as the relative path of the image to the (rendered) `index.html` file.

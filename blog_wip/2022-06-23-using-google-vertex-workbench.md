@@ -2,7 +2,7 @@
 layout: blog
 title: "Using Google's Vertex Workbench"
 description: "The ideas and a step-by-step guide to setting up Vertex Workbench to work with virtual machines and Jupyter notebooks."
-tags: [Blog]
+tags: [API & Services, MLOps, Google, TensorFlow]
 notfull: true
 keywords: "google vertex workbench jupyter notebook"
 date: 2022-06-25
